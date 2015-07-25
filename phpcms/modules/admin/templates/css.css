@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(images/bjt.jpg);
+}
+
+.p12hei{ font-family:"宋体"; font-size:12px; color:#333; line-height:24px;}
+.p12bai{ color:#FFF; font-family:"宋体"; font-size:12px; font-weight:bold; line-height:22px;}
+.p14hong{ font-size:12px; font-family:"宋体"; font-weight:bold; color:#E9655C; line-height:25px;}
+.p12xibai{ color:#FFF; font-family:"宋体"; font-size:12px; line-height:25px;}
+.p18biaoti{ font-size:28px; font-family:"微软雅黑"; color:#F60; line-height:35px; font-weight:bold;}
+.p12hei2{ font-family:"宋体"; font-size:12px; color:#333; line-height:28px;}
+.p214huang{ color:#FA9C42; font-size:12px; font-family:"微软雅黑"; font-weight:bold; line-height:28px;}
+.p14cuohuong{ font-family:"宋体"; font-family:"宋体"; font-size:14px; color: #900; line-height:25px; font-weight:bold;}
+.p12hong{ font-size:12px; font-family:"宋体"; font-weight:bold; color:#F0091D; line-height:22px;}
+.p12zihong{ font-size:12px; font-family:"宋体"; line-height:28px; color:#AB405C;}
+.p12rl{ font-size:12px; font-family:"微软雅黑"; line-height:28px; font-weight:bold; color:#AB405C;}
+.p12lv{ font-size:12px; font-family:"微软雅黑"; line-height:28px; font-weight:bold; color:#4A963B;}
+
+a{text-decoration: none; color:black;}

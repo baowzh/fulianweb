@@ -1,0 +1,147 @@
+<?php if ($catid == 1):?>
+{template "content","header_show"}
+{template "content","nmgfl_show"}
+
+<?php elseif ($catid == 16) :?>
+{template "content","header_show"}
+{template "content" , "tw3"}
+
+<?php elseif(($catid == 6) or ($catid >= 63 and $catid <= 84)):?>
+  {template "content","header_show"}
+{template "content" , "fnvz3"}
+
+<?php elseif ( ($catid == 7) or ( ($catid >= 50) and ($catid <= 53) )):?>
+  {template "content","header_show"}
+{template "content" , "xcjy3"}
+
+<?php elseif( ($catid == 8) or ( ($catid >= 57) and ($catid <= 59) )):?>
+  {template "content","header_show"}
+{template "content" , "zzjs3"}  
+
+<?php elseif(($catid == 9) or ( ($catid >= 54) and ($catid <= 56) )):?>
+  {template "content","header_show"}
+{template "content" , "lgss3"}
+
+<?php elseif( ($catid == 10) or ($catid >= 20 and $catid <= 24)):?>
+  {template "content","header_show"}
+{template "content" , "rtgz3"}  
+
+<?php elseif( ($catid == 11) or ($catid >= 85 and $catid <= 89)):?>
+{template "content" , "jzxh3"}  
+
+<?php elseif( ($catid == 12) or ($catid >= 36 and $catid <= 42)):?>
+{template "content","header_show"}    
+{template "content" , "wsjzxx3"}  
+
+<?php elseif( ($catid == 14) or ($catid >= 43 and $catid <= 49)):?>
+{template "content","header_show"}    
+{template "content" , "zw3"}  
+
+<?php elseif ($catid >= 63 and $catid <= 84):?>
+{template "content" , "js3"}  
+
+<?php elseif ($catid >= 36 and $catid <= 42):?>
+{template "content" , "wsjzxx3"}  
+
+<?php elseif ($catid >= 36 and $catid <= 42):?>
+{template "content" , "wsjzxx3"}  
+
+<!-- 专题 -->
+<?php elseif ($catid >= 124 and $catid <= 127):?>
+{template "content/xuexi/web" , "news-2"}  
+
+<?php elseif ($catid >= 129 and $catid <= 135):?>
+{template "content/zhuanti/zuimeijiating" , "detail"}  
+<?php exit;?>
+
+
+
+
+<?php elseif ($catid == 13 ):?>
+  {template "content","header_show"} 
+{template "content" , "tthy3"}  
+
+
+<?php else:?>	
+{template "content","header_show"} 
+
+
+<table width="1092" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="153" valign="top" style="background:url({$P}images/nmgfl_r2_c2.jpg) repeat-y;"><table width="1092" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="45" height="987">&nbsp;</td>
+        <td width="1010" height="987" align="center" valign="top"><table width="1004" border="0" cellspacing="0" cellpadding="0" style=" padding-top:10px;">
+          <tr>
+            <td height="569" align="right" valign="top"><table width="776" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img src="{$P}images/fnfz3_r2_c2.jpg" width="1005" height="32" /></td>
+                </tr>
+              <tr>
+                <td height="913" align="center" valign="top" style="background:url({$P}images/fnfz3_r4_c21.jpg) repeat-y;"><table width="948" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="44" align="center" bgcolor="#dddddd" class="p18hei" style="border-bottom:1px #CCC dashed;">{$title}</td>
+                  </tr>
+                </table>
+                  <table width="948" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="center" class="p12hei2" style="border-bottom:1px #999 dashed;">
+                        发布时间：{$inputtime}　来源：{$copyfrom}　字号：<a href="#" id="b" class="p12hei2">大</a>　 <a href="#" id="m" class="p12hei2">中</a> 　<a href="#" id="s" class="p12hei2">小</a>　 <a href="#" id="close" class="p12hei2">[关闭]</a>　 <a href="#" id="print" class="p12hei2">[打印]</a>
+                      </td>
+                    </tr>
+                  </table>
+                  <table width="948" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="948" height="821" align="left" valign="top" class="p12hei2">
+                      {if $video}
+<br />
+<br />
+<center>
+<div id="vd" style=""></div>
+</center>
+
+            <script type="text/javascript">
+            var flashvars = {
+              wmode: 'opaque',
+              file: '{$video}',
+              width: "600",
+              height : "480" ,
+              image: "http://www.nmtktdj.gov.cn/statics/images/index_r43_c32.jpg"
+            };
+            var params = {
+              menu: "false",
+              scale: "noScale",
+              allowFullscreen: "true",
+              allowScriptAccess: "always",
+              bgcolor: "#FFFFFF"
+
+            };  
+            swfobject.embedSWF("http://www.nmtktdj.gov.cn/statics/images/flvplayer.swf", "vd", 600,  480 , "9.0.0", "expressInstall.swf ", flashvars, params); 
+            </script>
+
+
+                      {/if}
+                      {$content}
+                    </td>
+                    </tr>
+                  </table>
+                  {template "content" , "np"}
+                </td>
+                </tr>
+              <tr>
+                <td><img src="{$P}images/fnfz3_r4_c2.jpg" width="1005" height="34" /></td>
+                </tr>
+            </table></td>
+            </tr>
+        </table></td>
+        <td width="37">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+
+
+
+
+<?php endif;?>
+{template "content","footer"}

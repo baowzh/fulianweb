@@ -1,0 +1,212 @@
+﻿{template "content","header"}
+<table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" class="sg_a_boder">
+  <tr>
+    <td height="30" background="../../../../statics/images/ybsds/menu_bg2.jpg" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>&nbsp;<strong>您的位置:</strong><a href="{siteurl($siteid)}">首页</a><span> > </span>在线邮件发送</td>
+        <td>&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" class="sg_a_boder" style="border-bottom:solid 3px #FFFFFF">
+  <tr>
+    <td background="../../../../statics/images/ybsds/menu_bg3.jpg" bgcolor="#FFFFFF"><img src="../../../../statics/images/ybsds/menu_bg3.jpg" width="1" height="4" /></td>
+  </tr>
+</table>
+<table width="1004" border="0" align="center" cellpadding="0" cellspacing="0" class="sg_a_boder" style="border-bottom:solid 5px #FFFFFF">
+  <tr>
+    <td bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="210" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><table width="190" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+                        <tr>
+                          <td width="50"><img src="../../../../statics/images/ybsds/x_1.jpg" width="50" height="32"></td>
+                          <td align="center" background="../../../../statics/images/ybsds/x_2.jpg">&nbsp;<a href="?m=mail&c=index&a=register&siteid=1" ><strong><span style="font-size:14px; color:#333333;">在线写信</span></strong></a></td>
+                          <td width="7"><img src="../../../../statics/images/ybsds/x_3.jpg" width="7" height="32"></td>
+                        </tr>
+                      </table>
+					  <table width="190" border="0" align="center" cellpadding="0" cellspacing="0" style="margin-top:10px;">
+                        <tr>
+                          <td width="50"><img src="../../../../statics/images/ybsds/x_1.jpg" width="50" height="32"></td>
+                          <td align="center" background="../../../../statics/images/ybsds/x_2.jpg">&nbsp;<a href="?m=mail&c=index&siteid=1" ><span style="font-size:14px; color:#333333;">信件回复查询</span></a></td>
+                          <td width="7"><img src="../../../../statics/images/ybsds/x_3.jpg" width="7" height="32"></td>
+                        </tr>
+                      </table></td>
+                  </tr>
+                </table>
+                </td>
+            </tr>
+        </table>
+          <p>&nbsp;</p>
+          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><form action="{APP_PATH}index.php?m=mail&c=index&a=sg&siteid={$siteid}" method="post" name="mys" id="mys">
+<table width="100%" cellpadding="0" cellspacing="1" class="table_form">
+<tbody>
+<tr>
+  <td height="30" align="center"><strong>信件回复状态查询：</strong></td>
+</tr>
+<tr> 
+<td height="30" align="center"><input name="bh" type="text" id="bh"  style="font-size:12px; color:#999999; height:22px; line-height:22px;" value="输入流水号查询" size="20"></td>
+</tr>
+<tr> 
+<td height="35" align="center" style="line-height:160%; color:#CC0000">*输入您写信时随机生成的流水号，可查询信件回复信息！
+  <input type="submit" value=" 提交查询 " name="dosubmit" class="button"></td>
+</tr> 
+</tbody></table>
+</form></td>
+            </tr>
+          </table>
+          </td>
+        <td width="10" align="center" valign="top"><img src="../../../../statics/images/ybsds/xian_1.jpg" width="6" height="308" /></td>
+        <td valign="top"><table width="100%" border="0" cellspacing="10" cellpadding="0">
+          <tr>
+            <td><table border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td background="../../../../statics/images/ybsds/class_2.jpg"><table border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td height="18" class="ybs_a_a1" style="padding-top:3px;"><a href="#">发送邮件</a></td>
+					<td>&nbsp;</td>
+                  </tr>
+                </table></td>
+                <td><img src="../../../../statics/images/ybsds/class_3.jpg" width="10" height="21" /></td>
+                <td><img src="../../../../statics/images/ybsds/class_4.jpg" width="314" height="21" /></td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+        </table>
+          <table width="100%" border="0" cellspacing="10" cellpadding="0">
+            <tr>
+              <td><form action="{APP_PATH}index.php?m=mail&c=index&a=register&siteid={$siteid}" method="post" name="myform" id="myform">
+<table width="100%" cellpadding="0" cellspacing="1">
+<tbody>
+<tr> 
+<th width='142' height="30" style="font-size:13px; color: #003366; font-weight:normal;">发件人类型</th>
+<td width="617"><input type="radio" onclick="$('#maillink').hide()" checked="checked" value="0" name="mailtype" class="radio_style"> 个人
+<input type="radio" onclick="$('#maillink').show()" value="1" name="mailtype" class="radio_style"> 企业
+</td>
+</tr>
+<tr> 
+<th height="30" style="font-size:13px; color: #003366; font-weight:normal;">信件分类</th>
+<td style="line-height:180%; color:#990000;">
+<select  style="width: 36%;" id="typeid" name="typeid">
+ <OPTION selected  value=0><?php echo $setting[$siteid]['sz6']; ?></OPTION> 
+{loop $types $type_arr}
+<option value="{$type_arr['typeid']}">{$type_arr['name']}</option>
+{/loop}
+</select>
+</td>
+</tr>
+<tr style="display: none;" id="maillink"> 
+<th height="30" style="font-size:13px; color: #003366; font-weight:normal;">公司名称</th>
+<td style="line-height:180%; color:#990000;"><input type="text" size="40" value="" name="gsmz" id="gsmz" class="input-text" style="height:18px; line-height:18px;"><span style="color:#CC0000">&nbsp;*</span></td>
+</tr>
+<tr> 
+<th height="30" bgcolor="#F0F0F0" style="font-size:13px; color: #003366; font-weight:normal;">联系人</th>
+<td bgcolor="#F0F0F0" style="line-height:180%; color:#990000;"><input type="text" size="20" value="" name="name" id="name" class="input-text" style="height:18px; line-height:18px;"><span style="color:#CC0000">&nbsp;*</span></td>
+</tr>
+<tr>
+<th height="30" style="font-size:13px; color: #003366; font-weight:normal;">联系电话</th>
+<td style="line-height:180%; color:#990000;"><input type="text" size="20" value="" name="tel" id="tel" class="input-text" style="height:18px; line-height:18px;"><span style="color:#CC0000">&nbsp;*</span></td>
+</tr>
+<tr>
+<th height="30" bgcolor="#F0F0F0" style="font-size:13px; color: #003366; font-weight:normal;">传真号码</th>
+<td bgcolor="#F0F0F0" style="line-height:180%; color:#990000;"><input type="text" size="20" value="" name="fax" id="fax" class="input-text" style="height:18px; line-height:18px;"></td>
+</tr>
+<tr>
+<th height="30" style="font-size:13px; color: #003366; font-weight:normal;">电子邮件</th>
+<td style="line-height:180%; color:#990000;"><input type="text" size="20" value="" name="email" id="email" class="input-text" style="height:18px; line-height:18px;"><span style="color:#CC0000">&nbsp;*</span></td>
+</tr>
+<tr> 
+<th height="30" bgcolor="#F0F0F0" style="font-size:13px; color: #003366; font-weight:normal;">邮件标题</th>
+<td bgcolor="#F0F0F0" style="line-height:180%; color:#990000;"><input type="text" value="" size="50" id="title" name="title" class="input-text" style="height:18px; line-height:18px;"><span style="color:#CC0000">&nbsp;*</span></td>
+</tr>
+<tr> 
+<th height="30" style="font-size:13px; color: #003366; font-weight:normal;">邮件内容</th>
+<td style="line-height:180%; color:#990000;"><textarea name='content'  id='content'  style='width:600px;height:180px;' ></textarea><span style="color:#CC0000">&nbsp;*</span></td>
+</tr>
+<tr> 
+<th height="30" bgcolor="#F0F0F0" style="font-size:13px; color: #003366; font-weight:normal;">设置查询密码</th>
+<td bgcolor="#F0F0F0" style="line-height:180%; color:#990000;"><input type="password"  value="" size="20" name="pass" id="pass" style="height:18px; line-height:18px;"></td>
+</tr>
+<tr> 
+<th height="30" style="font-size:13px; color: #003366; font-weight:normal;">是否公开</th>
+<td style="line-height:180%; color:#990000;"><input type="radio" value="0" name="ps"> 公开
+<input type="radio"  value="1" name="ps"  checked="checked"> 保密
+</td>
+</tr>
+{if $setting[$siteid]['sz2']=='1'}
+<tr>
+       <th height="30" bgcolor="#F0F0F0" style="font-size:13px; color: #003366; font-weight:normal;">验证码：</th>
+       <td bgcolor="#F0F0F0" style="line-height:180%; color:#990000;"><input name="code" type="text" id="code" size="10"  class="input-text"/> {form::checkcode('code_img','4','14',110,30)}</td>
+</tr>
+{/if}
+<tr> 
+<th height="30"></th>
+<td style="line-height:180%; color:#990000;"><input type="submit" value="立即发送" name="dosubmit" class="button"> <input type="reset" value=" 取 消 " name="reset" class="button"> </td>
+</tr> 
+</tbody></table>
+</form></td>
+            </tr>
+          </table>
+          <table width="100%" border="0" cellspacing="10" cellpadding="0">
+            <tr>
+              <td><div class="box boxsbg cboxs">
+    <h5><?php echo $setting[$siteid]['sz5']; ?>说明 </h5>
+     <div class="tag_a">
+&nbsp;&nbsp;&nbsp; 1、如果你有相关意见和建议等信息资询，直接发送<font color=red>电子邮件</font>或通过<font color=red>在线邮件发送</font>功能投递.
+<br><BR> 
+&nbsp;&nbsp;&nbsp; 2、赤峰市元宝山区地方税务局领导信箱专用地址:<A href="mailto:ldxx@ybsds.gov.cn"><font color=red>ldxx@ybsds.gov.cn</font></A>
+<span id="labSQBEmail">或者<A href="mailto:ldxx@ybsds.gov.cn"><font color=red>点击这里发送电子邮件</font></font></A></span>到领导信箱中.<BR>
+<BR>
+&nbsp;&nbsp;&nbsp; 3、我们会在5个工作日内回复你的信息到你的电子邮件中。并在《局长信箱-处理结果》中公布你的回复信息查询.<BR> 
+      </div>
+      </div></td>
+            </tr>
+          </table></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<script type="text/javascript" src="{JS_PATH}formvalidator.js" charset="UTF-8"></script> 
+<script type="text/javascript" src="{JS_PATH}formvalidatorregex.js" charset="UTF-8"></script>
+<script type="text/javascript">
+<!--
+	$(function(){
+	$.formValidator.initConfig({autotip:true,formid:"myform",onerror:function(msg){}});
+	$("#name").formValidator({onshow:"请输入联系人",onfocus:"请输入联系人"}).inputValidator({min:1,max:999,onerror:"联系人不能为空"});
+	$("#tel").formValidator({onshow:"请输入联系电话",onfocus:"请输入联系电话"}).inputValidator({min:1,max:999,onerror:"联系电话不能为空"});
+	$("#email").formValidator({onshow:"请输入电子邮件",onfocus:"请输入电子件邮件"}).inputValidator({min:1,max:999,onerror:"电子邮件不能为空"});
+	$("#pass").formValidator({onshow:"输入回复时查询密码",onfocus:"请输入回复查询密码"}).inputValidator({min:1,max:999,onerror:"查询密码不能为空"});
+	$("#title").formValidator({onshow:"请输入标题",onfocus:"请输入标题"}).inputValidator({min:1,max:999,onerror:"标题不能为空"});
+ 	$("#code").formValidator({onshow:"请输入验证码",onfocus:"验证码不能为空"}).inputValidator({min:1,max:999,onerror:"验证码不能为空"}).ajaxValidator({
+	    type : "get",
+		url : "",
+		data :"m=pay&c=deposit&a=public_checkcode",
+		datatype : "html",
+		async:'false',
+		success : function(data){	
+            if(data == 1)
+			{
+                return true;
+			}
+            else
+			{
+                return false;
+			}
+		},
+		buttons: $("#dosubmit"),
+		onerror : "验证码错误",
+		onwait : "验证中"
+	});
+ 	})
+//-->
+</script>
+{template "content","footer"}

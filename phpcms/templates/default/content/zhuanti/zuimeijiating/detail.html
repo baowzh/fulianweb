@@ -1,0 +1,92 @@
+<?php
+    $P = APP_PATH . "/phpcms/templates/default/content/zhuanti/zuimeijiating/";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<link href="{$P}css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background:url({$P}images/topbg02.jpg) no-repeat top center">
+  <tr>
+    <td align="center" valign="top"><table width="1002" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="466"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1002" height="465">
+            <param name="movie" value="{$P}swf/banner.swf" />
+            <param name="quality" value="high" />
+      <param name="wmode" value="transparent">
+            <embed src="{$P}swf/banner.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1002" height="465"></embed>
+          </object></td>
+        </tr>
+        <tr>
+          <td align="center" valign="top" style="padding-top:35px;"><table width="950" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="950" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="5"><img src="{$P}images/zy_wz01.jpg" width="5" height="32" /></td>
+            <td style="background:url({$P}images/zy_wz02.jpg) repeat-x"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="5%" align="center"><img src="{$P}images/wz_icon.jpg" width="17" height="17" /> </td>
+                <td width="95%" height="32" align="left" class="p12hui02"><a href="{$CATEGORYS[128][url]}" class="p12hui02">“德润草原·美在家庭”主题实践活动</a> &gt;&gt;  <span class="p12lansecu">详细信息</span></td>
+              </tr>
+            </table></td>
+            <td width="5"><img src="{$P}images/zy_wz03.jpg" width="5" height="32" /></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center" valign="top" style="padding-top:13px; border:1px solid #dbdbdb; border-top:none;" height="450"><table width="910" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="60" align="center" class="lan_24">{$title}</td>
+          </tr>
+          <tr>
+            <td height="28" align="center" class="p12bai" style="background:#ec3273;">
+              
+              {$inputtime}
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:15px; padding-top:25px;" align="left" class="p14huizhengwen">
+              
+              {$content}
+            </td>
+          </tr>
+          <tr>
+            <td style="background:url({$P}images/xwxx-btmline.jpg) repeat-x top; padding-top:15px;">
+			 <table width="910" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td><table width="910" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="78"><img src="{$P}images/sypicon.jpg" width="73" height="25"></td>
+                        <td align="left" bgcolor="#fce6ee" class="p12hei" style="padding-left:10px;"><a href="{$previous_page[url]}" class="p12huilk">{$previous_page[title]}</a></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  <tr>
+                    <td valign="top" style="padding-top:3px;"><table width="910" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="78"><img src="{$P}images/xypicon.jpg" width="73" height="25"></td>
+                        <td align="left" bgcolor="#fce6ee" class="p12hei" style="padding-left:10px;"><a href="{$next_page[url]}" class="p12huilk">{$next_page[title]}</a></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                </table>
+			</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="1040" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td height="138" class="p12bai" style="background:url({$P}images/bottom_bg.jpg) no-repeat center top; padding-left:130px; padding-top:30px;">版权所有：内蒙古自治区妇女联合会<a href="#" class="p12bai">  蒙ICP备 06006126号-1 </a></td>
+  </tr>
+</table>
+
+</body>
+</html>

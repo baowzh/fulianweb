@@ -1,0 +1,91 @@
+<?php
+    switch($catid)
+    {
+        //内蒙古妇联
+        case 1:
+           include(template("content" , "header"));
+           include(template("content", "nmgfl"));
+           include(template("content" , "footer"));
+           break;
+        //图文信息 2          
+        case 2:
+           include(template("content" , "header"));
+           include(template("content", "twxx"));
+           include(template("content" , "footer"));
+           break;
+               
+
+        case 5:
+           include(template("content" , "header"));
+           include(template("content", "wqwf"));
+           include(template("content" , "footer"));
+           break;          
+
+        case 6:
+           include(template("content" , "header"));
+           include(template("content", "fnvz"));
+           include(template("content" , "footer"));
+           break;                  
+
+        case 7:
+           include(template("content" , "header"));
+           include(template("content", "xcjy"));
+           include(template("content" , "footer"));
+           break;      
+
+        case 8:
+           include(template("content" , "header"));
+           include(template("content", "zzjs"));
+           include(template("content" , "footer"));
+           break;      
+
+        case 9:
+           include(template("content" , "header"));
+           include(template("content", "lgss"));
+           include(template("content" , "footer"));
+           break;   
+
+        case 10:
+           include(template("content" , "header"));
+           include(template("content", "rtgz"));
+           include(template("content" , "footer"));
+           break; 
+
+
+        //家政服务协会 11
+        case 11:           
+           include(template("content", "jzxh"));
+           break;    
+           
+        case 12:
+           include(template("content" , "header"));
+           include(template("content", "wsjzxx"));
+           include(template("content" , "footer"));
+           break;     
+
+        case 13:
+           include(template("content" , "header"));
+           include(template("content", "tthy"));
+           include(template("content" , "footer"));
+           break;    
+
+        case 14:
+           include(template("content" , "header"));
+           include(template("content", "zw"));
+           include(template("content" , "footer"));
+           break;      
+
+        case 15:
+           include(template("content" , "header"));
+           include(template("content", "zt"));
+           include(template("content" , "footer"));
+           break;   
+
+        default:
+           include(template("content" , "header"));
+           include(template("content", "general_list"));
+           include(template("content" , "footer"));
+           break;                                                   
+
+    }
+?>

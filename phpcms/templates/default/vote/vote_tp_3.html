@@ -1,0 +1,36 @@
+<?php
+    $P = APP_PATH . "/phpcms/templates/default/content/";
+?>
+<form name="myform" id="vform"  action="{APP_PATH}index.php?m=vote&c=index&a=post&subjectid={$subjectid}" method="post" target="_blank">
+<input type="hidden" name="subjectid" value="{$subjectid}" />      
+
+                      <table width="450" border="0" cellspacing="0" cellpadding="0">                      
+                      <tr>
+                        <td height="51" align="left" valign="top" class="p12zihong">　　{$subject} </td>
+                      </tr>
+                      <tr>
+                        <td height="28" align="left" valign="top" class="p12hei2">
+                          <table width="450" border="0" cellspacing="0" cellpadding="0">
+                          <tr><td class="p12zihong">
+{loop $options $n $r}
+{$i++}
+{if $vote_data['total']==0 }
+{php $per=0;}
+{else}
+{php $per=intval($vote_data[$r['optionid']]/$vote_data['total']*100);}
+{/if}
+<input type={if $ischeckbox=='0'}"radio"{else}"checkbox"{/if} name="radio[]" id="radio" value="{$r['optionid']}" {$check_status}/>{$r['option']}
+{/loop}    
+</td>                        
+</tr>
+                        </table></td>
+                      </tr>
+                    </table>
+                      <table width="470" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="276">&nbsp;</td>
+                          <td width="97" align="center"><input type="submit" value=" " class="votesubmit"></td>
+                          <td width="97" align="center"><a href="index.php?m=vote&c=index&a=result&subjectid={$subjectid}&siteid=1"><img src="{$P}images/ck.jpg" width="52" height="17" /></a></td>
+                        </tr>
+                      </table>
+</form>

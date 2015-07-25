@@ -1,0 +1,87 @@
+<?php
+$P = "http://www.nmwomen.org.cn/phpcms/templates/default/content/xuexi/web/"
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<link href="{$P}style/css.css" rel="stylesheet" type="text/css" />
+<script src="{$P}Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="top" >
+</div>
+
+<div class="wk">
+
+    <div class="newd">
+      <h3 class="h3"><a href="{$CATEGORYS[124][url]}"><em><img src="{$P}style/img/more.jpg" /></em></a></h3>
+      <div class="new_k">
+        <div class="new_img" >
+          
+{pc:content  action="lists" catid="124" thumb="1" order="listorder DESC" num="1"}
+{loop $data $v}
+        <img src="{thumb($v[thumb],260,180)}" width="260" height="180" /><p>{$v[title]}</p>
+{/loop}
+{/pc} 
+          
+        </div>
+        <ul  class="newsList" >
+{pc:content  action="lists" catid="124" thumb="0" order="listorder DESC" num="6"}
+                            {loop $data $v}
+          <li > <a title="{$v[title]}" href="{$v[url]}">{str_cut($v[title],69)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+{/loop}
+{/pc}
+        </ul>
+      </div>
+    </div>
+    <div class="newd">
+      <h3 class="h2"><a href="{$CATEGORYS[125][url]}"><em><img src="{$P}style/img/more.jpg" /></em></a></h3>
+      <div class="new_k">
+        <div class="new_img" >
+{pc:content  action="lists" catid="125" thumb="1" order="listorder DESC" num="1"}
+{loop $data $v}
+        <img src="{thumb($v[thumb],260,180)}" width="260" height="180" /><p>{$v[title]}</p>
+{/loop}
+{/pc}  
+</div>      
+        <ul  class="newsList" >
+{pc:content  action="lists" catid="125" thumb="0" order="listorder DESC" num="6"}
+{loop $data $v}
+          <li > <a title="{$v[title]}" href="{$v[url]}">{str_cut($v[title],69)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+{/loop}
+{/pc}
+        </ul>
+      </div>
+    </div>
+      <div class="mainfootright">
+        <h2><a href="news.html"><em>公司新闻</em></a> <span class="moress"><a href="{$CATEGORYS[126][url]}">更多>></a></span> </h2>
+        <div class="newlist">
+          <ul class="lists">
+{pc:content  action="lists" catid="126" thumb="0" order="listorder DESC" num="6"}
+                            {loop $data $v}
+          <li > <a title="{$v[title]}" href="{$v[url]}">{str_cut($v[title],69)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+{/loop}
+{/pc}</ul>
+        </div>
+      </div>
+      <div class="mainfootright">
+        <h3><a href="news.html"><em>公司新闻</em></a> <span class="moress"><a href="{$CATEGORYS[127][url]}">更多>></a></span> </h3>
+        <div class="newlist" >
+          <ul class="lists">
+{pc:content  action="lists" catid="127" thumb="0" order="listorder DESC" num="6"}
+                            {loop $data $v}
+          <li > <a title="{$v[title]}" href="{$v[url]}">{str_cut($v[title],69)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+{/loop}
+{/pc}</ul>
+        </div>
+  </div>
+</div>
+<div class="foot">蒙ICP备 06006126号-1 版权所有：内蒙古自治区妇女联合会</div>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+</body>
+</html>

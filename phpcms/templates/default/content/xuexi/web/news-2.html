@@ -1,0 +1,83 @@
+<?php
+$P = "http://www.nmwomen.org.cn/phpcms/templates/default/content/xuexi/web/"
+?>
+<?php
+   //获取父级id
+   $parents = $CATEGORYS[$catid][arrparentid];
+
+   $pararr = explode(",",$parents);   
+   if (count($pararr) == 1){
+      $finalid = $catid;
+      $imgid = $catid;      
+   }
+   if (count($pararr) == 2){
+      $finalid = $pararr[1];
+      $imgid = $pararr[1];
+   } 
+   if (count($pararr) == 3){
+      $finalid = $pararr[2];
+      $imgid = $pararr[1];
+   }      
+?>   
+
+<?php
+$siteids = getcache('category_content','commons');
+$siteid = $siteids[$catid];
+$CATEGORYS = getcache('category_content_'.$siteid,'commons');
+$catname=$CATEGORYS[$catid]['catname'];
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+<link href="{$P}style/css.css" rel="stylesheet" type="text/css" />
+<script src="{$P}Scripts/swfobject_modified.js" type="text/javascript"></script>
+</head>
+
+<body>
+<div class="top" >
+</div>
+<div class="wk">   <div class="zyright">
+    <h3 class="h3 sy01"><a href="index.htm"><em>首页>{$catname}</em></a></h3>
+    <div class="zywz"> <table width="940" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="44" align="center" bgcolor="#dddddd" class="p18biaoti" style="font-size:14px; font-weight:bold;">{$title}</td>
+                  </tr>
+                </table>
+                    <table width="940" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="center" class="p12hei2" style="border-bottom:1px #999 dashed; height:30px;">
+                        发布时间：{$inputtime}　　来源：{$copyfrom}　字号：<a href="#" id="b" class="p12hei2">大</a>　 <a href="#" id="m" class="p12hei2">中</a> 　<a href="#" id="s" class="p12hei2">小</a>　 <a href="#" id="close" class="p12hei2">[关闭]</a>　 <a href="#" id="print" class="p12hei2">[打印]</a>
+                      </td>
+                    </tr>
+                  </table>
+
+  {$content}
+
+</div>
+<div style="padding:15px;">
+<table width="940" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td align="left" bgcolor="#F5F5F5" class="p12hong"  style="border-bottom:1px #E6E6E6 solid;">　　上一篇：<span class="p12hong" style="border-bottom:1px #E6E6E6 solid;">
+                            <a href="{$previous_page[url]}" class="p12hong">{$previous_page[title]}</a>
+                          </span></td>
+                        </tr>
+                      </table>
+<table width="940" border="0" cellspacing="0" cellpadding="0">
+<tr>
+                      <td align="left" bgcolor="#F5F5F5" class="p12hong" style="border-bottom:1px #E6E6E6 solid;">　　下一篇：<span class="p12hong" style="border-bottom:1px #E6E6E6 solid;">
+                        <a href="{$next_page[url]}" class="p12hong">{$next_page[title]}</a>
+                      </span></td>
+                    </tr>
+                  </table>
+    </div>
+    
+</div>
+</div>
+<div class="foot">蒙ICP备 06006126号-1 版权所有：内蒙古自治区妇女联合会</div>
+<script type="text/javascript">
+swfobject.registerObject("FlashID");
+</script>
+</body>
+</html>

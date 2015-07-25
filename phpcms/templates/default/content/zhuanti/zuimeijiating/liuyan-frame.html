@@ -1,0 +1,28 @@
+<?php
+    $P = APP_PATH . "/phpcms/templates/default/content/zhuanti/zuimeijiating/";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:none;">
+<link href="{$P}css/style.css" rel="stylesheet" type="text/css">
+<table width="550" border="0" cellpadding="0" cellspacing="0">
+{pc:mail action="lists" typeid="57" siteid="1" num="6" passed="1" order="mailid desc"}  
+{loop $data $v}     
+          <tr>
+            <td height="30" style="border-bottom:1px dashed #ccc;" align="center"><table width="540" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="496" align="left" class="p12hui02" style="line-height:24px; padding-top:5px; padding-bottom:5px;"><span class="p12lanse">{$v[name]}：</span>{$v[content]}</td>
+                <td width="80" valign="middle" class="p12juse">[{date('Y-m-d',$v[addtime])}]</td>
+              </tr>
+            </table></td>
+          </tr>
+{/loop}
+{/pc}
+</table>
+</body>
+</html>

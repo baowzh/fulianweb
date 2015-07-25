@@ -1,0 +1,427 @@
+<?php
+    $P = APP_PATH . "/phpcms/templates/default/content/zhuanti/zuimeijiating/";
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内蒙古自治区妇女联合会---内蒙古自治区“德润草原·美在家庭”主题实践活动</title>
+<link href="{$P}css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<table width="100%" border="0" cellspacing="0" cellpadding="0" align="center" style="background:url({$P}images/topbg02.jpg) no-repeat top center">
+  <tr>
+    <td align="center" valign="top"><table width="1002" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="466"><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="1002" height="465">
+            <param name="movie" value="{$P}swf/banner.swf" />
+            <param name="quality" value="high" />
+			<param name="wmode" value="transparent">
+            <embed src="{$P}swf/banner.swf" quality="high" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1002" height="465"></embed>
+          </object></td>
+        </tr>
+        <tr>
+          <td valign="top" style="padding-top:25px;"><table width="1002" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="303" align="right"><table width="287" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="right"><img src="{$P}images/hdjs_tit.jpg" width="281" height="28" /></td>
+                </tr>
+                <tr>
+                  <td height="217" align="center" valign="top" style="background:url({$P}images/hdjs_nrbg.jpg) repeat-y right"><table width="235" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="95" valign="bottom"><img src="{$P}images/hdjs_img.jpg" width="235" height="75" /></td>
+                    </tr>
+                    <tr>
+                      <td align="left" class="p12heihuiwei">
+                      {pc:get sql="select * from v9_news as a left join v9_news_data as b on (a.id=b.id) where a.id=13547" return="data"}
+                      {loop $data $v}
+                      {htmlspecialchars_decode(str_cut($v[content],200))}
+                      <a href="{$v[url]}" class="p12hongcu">【更多】</a></td>
+                      {/loop}
+                      {/pc}
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td><img src="{$P}images/hdjs_btm.jpg" width="287" height="64" /></td>
+                </tr>
+              </table></td>
+              <td width="398" align="center" valign="top"><table width="384" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td align="center"><table width="366" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="273"><img src="{$P}images/cyfs_tit.jpg" width="273" height="46" /></td>
+                      <td align="center" valign="top" class="p12bai" style="background:url({$P}images/cyfs_rtbg.jpg) no-repeat right top; padding-top:10px;">&nbsp;</td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td valign="top"><table width="384" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="2" height="260" valign="bottom"><img src="{$P}images/cyfs_bg01.jpg" width="2" height="254" /></td>
+                      <td align="left" valign="top" class="p12heihuiwei" style=" background:url({$P}images/cyfs_img.jpg) no-repeat center bottom; padding-top:18px; padding:20px; line-height:24px;">
+                      	
+                      {pc:get sql="select * from v9_news as a left join v9_news_data as b on (a.id=b.id) where a.id=13548" return="data"}
+                      {loop $data $v}
+                      {htmlspecialchars_decode(str_cut($v[content],400))}
+                      <a href="{$v[url]}" class="p12hongcu">【更多】</a></td>
+                      {/loop}
+                      {/pc}                      	
+
+                      </td>
+                      <td width="2" height="260" valign="bottom"><img src="{$P}images/cyfs_bg03.jpg" width="2" height="254" /></td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td><img src="{$P}images/cyfs_btm.jpg" width="384" height="3" /></td>
+                </tr>
+              </table></td>
+              <td align="right" valign="top" style="padding-right:25px;"><table width="270" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td>
+                  <a href="{$CATEGORYS[130][url]}">
+                  <img src="{$P}images/zxxx_tit.jpg" width="270" height="40" />
+                  </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td height="224" align="center" valign="top" style="background:url({$P}images/zxxx_nrbg.jpg) no-repeat; padding-top:20px;"><table width="227" border="0" cellspacing="0" cellpadding="0">
+{pc:content  action="lists" catid="130" thumb="0" order="listorder DESC" num="7"}
+{loop $data $v}                  
+                    <tr>
+                      <td height="28" align="left" class="p12hei02">·
+                      <a title="{$v[title]}" href="{$v[url]}" class="p12hui02">{str_cut($v[title],50)}</a></td>
+                    </tr>
+{/loop}
+{/pc}   
+                  </table></td>
+                </tr>
+                <tr>
+                  <td><img src="{$P}images/zxxx_btm.jpg" width="270" height="23" /></td>
+                </tr>
+              </table></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td align="center" valign="top" style="padding-top:13px;"><table width="960" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="135" style="background:url({$P}images/adv-imgbg.jpg) no-repeat top" valign="bottom"><img src="{$P}images/adv-img.jpg" width="960" height="112" /></td>
+            </tr>
+          </table></td>
+        </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="960" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td valign="top" style="padding-top:18px;"><table width="960" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="665" align="left"><table width="665" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="665" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" style="background:url({$P}images/jtzs_titbg.jpg) repeat-x"><img src="{$P}images/jtzs_tit.jpg" /></td>
+                <td width="115" height="41" align="center" style="background:url({$P}images/jtzs_tit-gd.jpg) no-repeat; padding-bottom:15px;"><a href="{$CATEGORYS[131][url]}" class="p12bai">查看更多&gt;&gt;</a></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td style="background:#fcf3f9;" height="205"><table width="665" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="290" align="center"><table width="273" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="195" align="center" style="background:url({$P}images/jtzs_imgbg.jpg) no-repeat"><div id="focusViwer" align=center></div>					
+<script type="text/javascript">
+<!--
+ var focus_width=247
+ var focus_height=169
+ var text_height=0
+ var swf_height = focus_height+text_height
+var curhref=document.location.href
+/*
+	var pics='{$P}images/aa01.jpg|{$P}images/aa02.jpg'
+	var links=''
+	var texts=''
+*/
+{pc:content  action="lists" catid="131" order="listorder DESC" num="5" thumb="1" return="data"}
+  var pics = "{loop $data $v}<?php echo thumb($v['thumb'],247,169);?>|{/loop}";
+  var links = "{loop $data $v}<?php echo $v[url]?>|{/loop}";
+  var texts = "{loop $data $v}'<?php echo $v[title]?>'|{/loop}";
+  var pics = pics.substring(0,pics.length -1);
+  links=encodeURIComponent(links);
+{/pc}
+ document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ focus_width +'" height="'+ swf_height +'">');
+ document.write('<param name="allowScriptAccess" value="sameDomain"><param name="movie" value="{$P}focus.swf"> <param name="quality" value="high"><param name="bgcolor" value="#ffffff">');
+ document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+ document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'">');
+ document.write('<embed src="{$P}focus.swf" wmode="opaque" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&borderwidth='+focus_width+'&borderheight='+focus_height+'&textheight='+text_height+'" menu="false" bgcolor="#ffffff" quality="high" width="'+ focus_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');  document.write('</object>');
+ 
+ //-->
+    </script></td>
+                  </tr>
+                </table></td>
+                <td align="left" valign="top" style="padding-top:15px;"><table width="360" border="0" cellspacing="0" cellpadding="0">
+
+{pc:content  action="lists" catid="131" thumb="0" order="listorder DESC" num="6"}
+{loop $data $v}                  
+                  <tr>
+                    <td height="28" align="center" style="background:url({$P}images/jtzs_line.jpg) repeat-x bottom"><table width="348" border="0" cellspacing="0" cellpadding="0">
+
+                      <tr>
+                        <td width="312" height="28" align="left" class="p12hui02"><img src="{$P}images/red_icon.jpg" width="7" height="9" /> <a title="{$v[title]}" href="{$v[url]}" class="p12hui02">{str_cut($v[title],69)}</a>…</td>
+                        <td width="36" align="left" class="p12hui02">{date('m-d',$v[inputtime])}</td>
+                      </tr>
+                    </table></td>
+                  </tr>
+{/loop}
+{/pc} 
+
+
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+        <td align="right" valign="top"><table width="280" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><a href="{$CATEGORYS[132][url]}"><img src="{$P}images/video_tit.jpg" width="280" height="38" border="0" /></a></td>
+          </tr>
+          <tr>
+            <td height="221" align="center" style="background:#fcf3f9;"><table width="269" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td>
+                <!--
+                <img src="{$P}images/video_img.jpg" width="269" height="167" border="0" />                
+                -->
+<embed allowfullscreen="true" allowscriptaccess="always" bgcolor="#ffffff" flashvars="image=http://www.nmwomen.org.cn/uploadfile/2014/0330/20140330041801454.jpg&amp;volume=90&amp;stretching=fill&amp;icon=false&amp;file=http://www.nmwomen.org.cn/phpcms/templates/default/content/zhuanti/zuimeijiating/swf/1.flv&amp;skin=http://www.nmwomen.org.cn/statics/js/ckeditor/plugins/flvPlayer/player/skin.zip&amp;autostart=true" height="167px" src="http://www.nmwomen.org.cn/statics/js/ckeditor/plugins/flvPlayer/player/player.swf" width="269"></embed>
+                </td>
+              </tr>
+              <tr>
+                <td><img src="{$P}images/video_imgbg.jpg" width="249" height="41" /></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top" style="padding-top:18px;"><table width="960" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="665" align="left"><table width="665" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="665" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td class="p14fengcu" style="background:url({$P}images/jfjx_titbg.jpg) no-repeat; padding-left:40px; padding-top:10px;">家风家训荟萃</td>
+    <td width="384" height="37" align="right" style="background:url({$P}images/jfjx_rtbg.jpg) no-repeat; padding-right:15px;"><a href="{$CATEGORYS[133][url]}" class="p12bai">更多&gt;&gt;</a></td>
+  </tr>
+</table>
+</td>
+      </tr>
+      <tr>
+        <td height="255" align="center" style="border:1px solid #ae003e; border-top:none; background:url({$P}images/jfjx_btmbg.jpg) no-repeat center bottom "><table width="630" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="225" align="left"><img src="{$P}images/jfjx_lftimg.jpg" width="198" height="235" /></td>
+            <td align="center"><table width="375" border="0" cellspacing="0" cellpadding="0">
+{pc:content  action="lists" catid="133" thumb="0" order="listorder DESC" num="6"}
+{loop $data $v}             
+                        <tr>
+                          <td height="28" align="center" style="background:url({$P}images/news_line.jpg) repeat-x bottom"><table width="365" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                              <td width="324" height="28" align="left" class="p12hui02"><img src="{$P}images/bule_icon.jpg" width="9" height="9" />
+<a title="{$v[title]}" href="{$v[url]}" class="p12hui02">{str_cut($v[title],69)}</a>
+                              <img src="{$P}images/hotf.gif" width="28" height="16" border="0" /></td>
+                              <td width="41" class="p12hui02">02-23</td>
+                            </tr>
+                          </table></td>
+                        </tr>
+{/loop}
+{/pc} 
+                      </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td align="center"><img src="{$P}images/lft_adv.jpg" width="269" height="292" /></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<table width="960" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td valign="top" style="padding-top:18px;"><table width="960" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="960" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="480"><table width="480" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" style="background:url({$P}images/jfyy_tit_bg.jpg) repeat-x"><img src="{$P}images/jfyy_tit.jpg" width="193" height="34" /></td>
+                <td width="71" height="34" align="center" style="background:url({$P}images/jfyy_gdbg.jpg) no-repeat"><a href="{$CATEGORYS[134][url]}" class="p12bai">更多&gt;&gt;</a></td>
+              </tr>
+            </table></td>
+            <td><table width="480" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" style="background:url({$P}images/jfyy_tit_bg.jpg) repeat-x"><img src="{$P}images/ztzw_tit.jpg" width="190" height="34" /></td>
+                <td width="69" height="34" style="background:url({$P}images/ztzw_gdbg.jpg) no-repeat" align="center"><a href="{$CATEGORYS[135][url]}" class="p12bai">更多&gt;&gt;</a></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center" style="border-left:1px solid #d1d1d1; border-right:1px solid #d1d1d1;"><table width="935" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="468" height="240" align="left" valign="top" style="background:url({$P}images/jfyy_mid.jpg) no-repeat right bottom; padding-top:27px;"><table width="450" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" width="148" style="padding-top:10px;"><img src="{$P}images/jfyy_img.jpg" /></td>
+                <td align="center" valign="top" style="padding-top:10px;"><table width="295" border="0" cellspacing="0" cellpadding="0">
+{pc:content  action="lists" catid="134" thumb="0" order="listorder DESC" num="6"}
+{loop $data $v}                 
+                  <tr>
+                    <td style="background:url({$P}images/news_line.jpg) repeat-x bottom; padding:0px 5px;" height="28" align="left"><img src="{$P}images/bule_icon.jpg" width="9" height="9" />
+<a title="{$v[title]}" href="{$v[url]}" class="p12hei02">{str_cut($v[title],69)}</a>
+                    </td>
+                  </tr>
+{/loop}
+{/pc} 
+                </table></td>
+              </tr>
+            </table></td>
+            <td align="center"><table width="450" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="left" width="148" style="padding-top:10px;"><img src="{$P}images/ztzw_img.jpg" /></td>
+                <td align="center" valign="top" style="padding-top:10px;"><table width="295" border="0" cellspacing="0" cellpadding="0">
+{pc:content  action="lists" catid="135" thumb="0" order="listorder DESC" num="6"}
+{loop $data $v}                  
+                  <tr>
+                    <td style="background:url({$P}images/news_line.jpg) repeat-x bottom; padding:0px 5px;" height="28" align="left"><img src="{$P}images/bule_icon.jpg" width="9" height="9" /> 
+<a title="{$v[title]}" href="{$v[url]}" class="p12hei02">{str_cut($v[title],69)}</a>
+                    </td>
+                  </tr>
+{/loop}
+{/pc}   
+                </table></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><img src="{$P}images/ztzw_btmgb.jpg" /></td>
+      </tr>
+    </table></td>
+  </tr>
+  <tr>
+    <td valign="top" style="padding-top:18px;"><table width="975" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td align="left" style="background:url({$P}images/msg_rt.jpg) no-repeat right"><img src="{$P}images/msg_tit.jpg" /></td>
+  </tr>
+  <tr>
+    <td height="247" align="center" style=" background:url({$P}images/msg_nrbg.jpg) repeat-y">
+	 <table width="940" border="0">
+  <tr>
+    <td><table width="580" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td style="border:1px solid #E6E6E6; padding-top:10px;padding-bottom:10px" height="205" valign="top">
+<iframe src="/index.php?m=content&c=index&a=lists&catid=129&lyframe=1" width="570" height="190" style="border:none; padding-top:5px;"></iframe>  
+<!--     
+http://www.nmwomen.org.cn/index.php?m=content&c=index&a=lists&catid=129&lyframe=1   
+<table width="560" border="0" cellpadding="0" cellspacing="0">        
+{pc:mail action="lists" typeid="57" siteid="1" num="6" passed="1" order="mailid desc"}      
+{loop $data $v}
+              <tr>
+                <td width="482" height="30" align="left" class="p12hui02"><span class="p12lanse">{$v[name]}：</span>{$v[content]}</td>
+                <td width="62" class="p12juse">{date('Y-m-d',$v[addtime])}</td>
+              </tr>                        
+{/loop}
+{/pc} 
+        </table>
+{pc:get sql="SELECT count(*) as count FROM `v9_mail` WHERE typeid=57 and passed=1" return="data"}
+<?php $count = $data[0][count];?>
+{/pc}
+<table width="560" border="0" cellpadding="0" cellspacing="0"> 
+          <tr>
+            <td height="30" align="right" style="padding-right:10px; padding-top:10px;">已有 <span class="p12hong">{$count}</span> 位网友发表了评论【<span class="p12lansecu"><a href="/index.php?m=content&c=index&a=lists&catid=129&ly=1" class="p12lansecu">查看全部</a></span>】</td>
+          </tr>    
+</table>   
+-->
+        </td>
+      </tr>
+          <tr>
+            <td height="30" align="right" style="padding-right:10px; padding-top:10px;">已有 <span class="p12hong">{$count}</span> 位网友发表了评论【<span class="p12lansecu"><a href="/index.php?m=content&c=index&a=lists&catid=129&ly=1" class="p12lansecu">查看全部</a></span>】</td>
+          </tr>    
+    </table></td>
+
+
+<form action="{APP_PATH}index.php?m=mail&c=index&a=register&siteid={$siteid}" method="post" name="myform" id="myform">
+<input type="hidden" name="typeid" value="57" />
+<input type="hidden" name="email" value="guest@guest.com" />
+<input type="hidden" name="txt_email" value="none" />
+<input type="hidden" name="tel" value="88888888" />
+<input type="hidden" name="title" value="最美家庭专题网民留言" />
+
+    <td width="345" align="center"><table width="330" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td height="220" align="center" style="background-color:#f7f1aa;"><table width="310" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><table width="300" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="66" height="40" class="p12hei02">真实姓名：</td>
+                <td width="234" align="left"><input type="text" name="name" style="width:230px; border:1px solid #f3b56b;color:#4d4d4d;" value="填写您的留言用户名" onClick="if(this.value='填写您的留言用户名'){this.value=''}" /></td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="left"><textarea name="content" style="width:300px; border:1px solid #f3b56b; height:75px; color:#4d4d4d;">在这里发表您的幸福感言！</textarea></td>
+          </tr>
+          <tr>
+            <td align="left" valign="top" style="padding:10px;"><table width="247" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="113" align="left">
+<style type="text/css">
+.btn {
+ color: #FFFFFF;
+ background-image: url({$P}images/submit.jpg);
+ line-height: 15px;
+ height: 30px;
+ width: 104px;
+ border: none; /* border-top\left\right\bottom 也可以缩到一句 */
+}
+</style>
+
+
+                <input type="submit" name="dosubmit" id="dosubmit" class="btn" value="  ">
+
+                </td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+</form>
+
+
+  </tr>
+</table>
+	</td>
+  </tr>
+  <tr>
+   <Td><img src="{$P}images/msg_btm.jpg" width="975" height="26" /></Td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+<table width="1040" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td height="138" class="p12bai" style="background:url({$P}images/bottom_bg.jpg) no-repeat center top; padding-left:130px; padding-top:30px;">版权所有：内蒙古自治区妇女联合会<a href="#" class="p12bai">  蒙ICP备 06006126号-1 </a></td>
+  </tr>
+</table>
+
+</body>
+</html>

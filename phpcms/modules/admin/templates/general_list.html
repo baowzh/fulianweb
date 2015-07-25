@@ -1,0 +1,78 @@
+
+<table width="1092" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="153" valign="top" style="background:url({$P}images/nmgfl_r2_c2.jpg) repeat-y;"><table width="1092" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="43" height="684">&nbsp;</td>
+        <td width="1013" height="684" align="center" valign="top"><table width="1004" border="0" cellspacing="0" cellpadding="0" style=" padding-top:10px;">
+          <tr>
+            <td width="217" height="569" valign="top"><table width="217" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="223" align="center" valign="top" style="background:url({$P}images/jg_r2_c2.jpg) repeat-x;"><table width="217" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
+                  <tr>
+                    <td align="center" class="p14hong">{$catname}</td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="20"><img src="{$P}images/jg_r3_c2.jpg" width="217" height="47" /></td>
+              </tr>
+              </table>
+              <table width="217" border="0" cellspacing="0" cellpadding="0" style="margin-top:10px;">
+                <tr>
+                  <td><img src="{$P}images/nmgfl_r17_c3.jpg" width="217" height="388" /></td>
+                </tr>
+              </table></td>
+            <td align="right" valign="top"><table width="762" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="43" align="left" valign="top"  style="background:url({$P}images/jg_r2_c6.jpg) no-repeat;"><table width="200" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="37" height="37">&nbsp;</td>
+                    <td width="163" class="p14cuohuong">{$catname}</td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+              <table width="762" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td><img src="{$P}images/jg_r3_c6.jpg" width="762" height="40" /></td>
+                </tr>
+                <tr>
+                  <td height="546" align="center" valign="top" style=" border-left:1px #CCC solid; border-right:1px #CCC solid;">
+                    <table width="742" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="545" align="left" valign="top">
+{pc:content  action="lists" catid="$catid" thumb="0" order="listorder DESC" num="25" page="$page" moreinfo="1"}
+{loop $data $v}
+                        <table width="740" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td width="25" align="center" class="p12hei" style="border-bottom:1px #CCC dashed;">·</td>
+                          <td width="639" align="left" class="p12hei2" style="border-bottom:1px #CCC dashed;">
+                            <a href="{$v[url]}" class="p12hei2">
+                            {$v[title]}
+                          </a>
+                          </td>
+                          <td width="76" align="left" class="p12hei2" style="border-bottom:1px #CCC dashed;">{date('Y-m-d',$v[inputtime])}</td>
+                        </tr>
+                      </table>
+{/loop}
+
+<div id="pages">{$pages}</div>
+{/pc}    
+
+
+                       </td>
+                    </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td><img src="{$P}images/jg_r7_c6.jpg" width="762" height="38" /></td>
+                </tr>
+              </table></td>
+            </tr>
+        </table></td>
+        <td width="36">&nbsp;</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
