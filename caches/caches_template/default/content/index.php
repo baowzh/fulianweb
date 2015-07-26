@@ -43,13 +43,13 @@ $(function(){
   <div id="hdp">
     <div class="wwwzzjsnet">
       <ul class="www_zzjs_net">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e3c7502c23059f119c8056d533da6121&action=lists&catid=16&order=listorder+DESC&num=5&thumb=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','order'=>'listorder DESC','thumb'=>'1','limit'=>'5',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e3c7502c23059f119c8056d533da6121&action=lists&catid=16&order=listorder+DESC&num=5&thumb=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','order'=>'listorder DESC','thumb'=>'1','limit'=>'5',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
         <li><a href="<?php echo $v['url'];?>" target="_blank"><img width="295" height="274" src="<?php echo thumb($v[thumb] , 288 , 274);?>" /></a></li>
 <?php $n++;}unset($n); ?><?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>                
       </ul>
     </div>
     <ul class="JQ-slide-nav">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e3c7502c23059f119c8056d533da6121&action=lists&catid=16&order=listorder+DESC&num=5&thumb=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','order'=>'listorder DESC','thumb'=>'1','limit'=>'5',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e3c7502c23059f119c8056d533da6121&action=lists&catid=16&order=listorder+DESC&num=5&thumb=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','order'=>'listorder DESC','thumb'=>'1','limit'=>'5',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>      
       <li><a href="<?php echo $v['url'];?>" class="next"><img src="<?php echo thumb($v[thumb] , 60 , 46);?>"></a></li>
 <?php $n++;}unset($n); ?>
@@ -87,7 +87,7 @@ $(function(){
                         <tr>
                           <td height="211" align="left" valign="top" style="background:url(<?php echo $P;?>images/face.jpg) no-repeat;">
 
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=bad26f6491470951a7c7255f44691e92&action=lists&catid=16&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=bad26f6491470951a7c7255f44691e92&action=lists&catid=16&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'16','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?>
                             <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                             <table width="369" border="0" cellspacing="0" cellpadding="0">
                             <tr>
@@ -151,7 +151,7 @@ $(function(){
                         <td height="9"><img src="<?php echo $P;?>images/index_r33_c3.jpg" width="252" height="9" /></td>
                       </tr>
                     </table>
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=f02f6b22238b0ea8632efe50b65e5ba6&action=lists&catid=17&thumb=0&order=listorder+DESC&num=2\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'17','thumb'=>'0','order'=>'listorder DESC','limit'=>'2',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=f02f6b22238b0ea8632efe50b65e5ba6&action=lists&catid=17&thumb=0&order=listorder+DESC&num=2\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'17','thumb'=>'0','order'=>'listorder DESC','limit'=>'2',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
 <?php $num++; ?>
                     <table width="252" border="0" cellspacing="0" cellpadding="0">
                       <tr>
@@ -199,7 +199,7 @@ $(function(){
                             <tr>
                               <td height="193" align="left" valign="top">
 
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=84ab6a9de4fb6bb3bb801eb1a92d8f19&action=lists&catid=18&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'18','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=84ab6a9de4fb6bb3bb801eb1a92d8f19&action=lists&catid=18&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'18','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                                 <table width="243" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -229,7 +229,7 @@ $(function(){
                             <tr>
                               <td height="193" align="left" valign="top">
 
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=43dc60ad9a787984367139ad8f1578b8&action=lists&catid=19&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'19','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=43dc60ad9a787984367139ad8f1578b8&action=lists&catid=19&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'19','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                                 <table width="243" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -292,7 +292,7 @@ $("#gg .JQ-slide").Slide({
 <div id="gg">
 <div class="JQ-slide">
 <div class="JQ-slide-content">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=0f73e0c3cac9a2986c3868b057b0bec0&action=lists&catid=3&thumb=0&order=listorder+DESC&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'3','thumb'=>'0','order'=>'listorder DESC','limit'=>'10',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=0f73e0c3cac9a2986c3868b057b0bec0&action=lists&catid=3&thumb=0&order=listorder+DESC&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'3','thumb'=>'0','order'=>'listorder DESC','limit'=>'10',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
 <li><a href="<?php echo $v['url'];?>" class="p12hei2"><?php echo str_cut($v[title] , 43);?></a></li>
 <?php $n++;}unset($n); ?><?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 </div>
@@ -347,7 +347,7 @@ $("#gg .JQ-slide").Slide({
                     <tr>
                       <td height="193" align="left" valign="top">
 <!-- OLD IS 30 -->
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5e0e0908806a7db4866f832c6df52b49&action=lists&catid=34&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'34','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5e0e0908806a7db4866f832c6df52b49&action=lists&catid=34&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'34','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                         <table width="243" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -362,7 +362,7 @@ $("#gg .JQ-slide").Slide({
                     <table width="245" border="0" cellspacing="0" cellpadding="0" id="tabzx1" style="display:none;">
                     <tr>
                       <td height="193" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5e0e0908806a7db4866f832c6df52b49&action=lists&catid=34&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'34','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5e0e0908806a7db4866f832c6df52b49&action=lists&catid=34&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'34','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                         <table width="243" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -377,7 +377,7 @@ $("#gg .JQ-slide").Slide({
                     <table width="245" border="0" cellspacing="0" cellpadding="0" id="tabzx2" style="display:none;">
                     <tr>
                       <td height="193" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=18e374f4a3ce1c3f4e5d07aa3a2614cf&action=lists&catid=35&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'35','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=18e374f4a3ce1c3f4e5d07aa3a2614cf&action=lists&catid=35&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'35','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                         <table width="243" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -413,7 +413,7 @@ $("#gg .JQ-slide").Slide({
                   <td height="231" align="center" style="border-left:1px #CCC solid;border-right:1px #CCC solid; background:url(<?php echo $P;?>images/index_hw.jpg) right no-repeat;"><table width="352" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td width="352" height="203" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=3d0050931f14fc95431faf29cfddac80&action=lists&catid=30&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'30','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=3d0050931f14fc95431faf29cfddac80&action=lists&catid=30&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'30','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                         <table width="352" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -443,7 +443,7 @@ $("#gg .JQ-slide").Slide({
                   <td height="153" align="center" style="background:url(<?php echo $P;?>images/index_hw.jpg) right no-repeat; border-left:1px #CCC solid; border-right:1px #CCC solid;"><table width="352" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td width="352" height="145" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=4b2018e98e5a14f37a49f495fedf9d3d&action=lists&catid=31&thumb=0&order=listorder+DESC&num=5\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'31','thumb'=>'0','order'=>'listorder DESC','limit'=>'5',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=4b2018e98e5a14f37a49f495fedf9d3d&action=lists&catid=31&thumb=0&order=listorder+DESC&num=5\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'31','thumb'=>'0','order'=>'listorder DESC','limit'=>'5',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                         <table width="352" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                           <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -492,7 +492,7 @@ $(document).ready(function(){
                         <tr>
         <div class="tpgd">
             <ul>
-              <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=567a7d0a89cce304d74f0ce49b49d3ac&action=lists&catid=93&thumb=1&order=listorder+DESC&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'93','thumb'=>'1','order'=>'listorder DESC','limit'=>'10',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>              
+              <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=567a7d0a89cce304d74f0ce49b49d3ac&action=lists&catid=93&thumb=1&order=listorder+DESC&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'93','thumb'=>'1','order'=>'listorder DESC','limit'=>'10',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>              
               <?php $num++; ?>
               <li><a href="<?php echo $v['url'];?>"><img src="<?php echo thumb($v[thumb] , 85 , 79);?>" width="86" height="80" /></a></li>
               <?php $n++;}unset($n); ?>
@@ -532,7 +532,7 @@ $(document).ready(function(){
                           <table width="352" border="0" cellspacing="0" cellpadding="0" id="xxxb0">
                           <tr>
                             <td width="352" height="203" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=41b64706467d96a3aecc3710251ea4f7&sql=select+%2A+from+v9_news+where+catid+in+%2863%2C66%2C65%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (63,66,65) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=41b64706467d96a3aecc3710251ea4f7&sql=select+%2A+from+v9_news+where+catid+in+%2863%2C66%2C65%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (63,66,65) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                             
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
@@ -548,7 +548,7 @@ $(document).ready(function(){
                           <table width="352" border="0" cellspacing="0" cellpadding="0" id="xxxb1" style="display:none;">
                           <tr>
                             <td width="352" height="203" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=dd470bf04dd28abf0f541308d57e5ac2&action=lists&catid=66&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'66','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                              
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=dd470bf04dd28abf0f541308d57e5ac2&action=lists&catid=66&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'66','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                              
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -563,7 +563,7 @@ $(document).ready(function(){
                           <table width="352" border="0" cellspacing="0" cellpadding="0" id="xxxb2" style="display:none;">
                           <tr>
                             <td width="352" height="203" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=9a5ccce7b361fe693717738cef124cef&action=lists&catid=65&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'65','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                              
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=9a5ccce7b361fe693717738cef124cef&action=lists&catid=65&thumb=0&order=listorder+DESC&num=7\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'65','thumb'=>'0','order'=>'listorder DESC','limit'=>'7',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                              
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -612,7 +612,7 @@ $(document).ready(function(){
                           <table width="352" border="0" cellspacing="0" cellpadding="0" id="jg0">
                           <tr>
                             <td width="352" height="203" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=bd2f4afe9681a3e62e880880362d814e&sql=select+%2A+from+v9_news+where+catid+in+%2864%2C78%2C79%2C80%2C82%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (64,78,79,80,82) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=bd2f4afe9681a3e62e880880362d814e&sql=select+%2A+from+v9_news+where+catid+in+%2864%2C78%2C79%2C80%2C82%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (64,78,79,80,82) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>  
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
@@ -628,7 +628,7 @@ $(document).ready(function(){
                           <table width="352" border="0" cellspacing="0" cellpadding="0" id="jg1" style="display:none;">
                           <tr>
                             <td width="352" height="203" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=9e1c7be98cdae135ca1950869abdb80d&sql=select+%2A+from+v9_news+where+catid+in+%2883%2C82%2C84%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (83,82,84) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=9e1c7be98cdae135ca1950869abdb80d&sql=select+%2A+from+v9_news+where+catid+in+%2883%2C82%2C84%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (83,82,84) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -643,7 +643,7 @@ $(document).ready(function(){
                           <table width="352" border="0" cellspacing="0" cellpadding="0" id="jg2" style="display:none;">
                           <tr>
                             <td width="352" height="203" align="left" valign="top">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=6ec40df222e321ce12a60f3887e2395a&sql=select+%2A+from+v9_news+where+catid+in+%2879%2C78%2C80%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (79,78,80) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"get\" data=\"op=get&tag_md5=6ec40df222e321ce12a60f3887e2395a&sql=select+%2A+from+v9_news+where+catid+in+%2879%2C78%2C80%29+order+by+id+desc&num=7&return=data\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}pc_base::load_sys_class("get_model", "model", 0);$get_db = new get_model();$r = $get_db->sql_query("select * from v9_news where catid in (79,78,80) order by id desc LIMIT 7");while(($s = $get_db->fetch_next()) != false) {$a[] = $s;}$data = $a;unset($a);?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                   <td width="14" align="center" style="border-bottom:1px #CCC dashed;"><img src="<?php echo $P;?>images/index_r21_c10.jpg" width="8" height="6" /></td>
@@ -711,7 +711,7 @@ $(document).ready(function(){
                   <tr>
                     <td height="150" align="center" valign="top" bgcolor="#FFF6ED">
 
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=d7e1f64295ca9150118df94bd9de7308&action=lists&catid=4&thumb=0&order=listorder+DESC&num=5\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'4','thumb'=>'0','order'=>'listorder DESC','limit'=>'5',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=d7e1f64295ca9150118df94bd9de7308&action=lists&catid=4&thumb=0&order=listorder+DESC&num=5\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'4','thumb'=>'0','order'=>'listorder DESC','limit'=>'5',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                       <table width="210" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px #CCC dashed;">
                       <tr>
                         <td align="left" class="p12hei2"><a href="<?php echo $v['url'];?>" class="p12hei2"><?php echo str_cut($v[title], 52);?></a></td>
@@ -733,7 +733,7 @@ $(document).ready(function(){
                 <table width="222" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td width="212" align="center" valign="top" bgcolor="#FBF8F1">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=9e44447f17ee34a98548497db5bce360&action=lists&catid=90&thumb=0&order=listorder+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'90','thumb'=>'0','order'=>'listorder DESC','limit'=>'4',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=9e44447f17ee34a98548497db5bce360&action=lists&catid=90&thumb=0&order=listorder+DESC&num=4\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'90','thumb'=>'0','order'=>'listorder DESC','limit'=>'4',));}?><?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                       <table width="200" border="0" cellspacing="0" cellpadding="0" style="border-bottom:1px #CCC dashed;">
                       <tr>
                         <td align="left" class="p12hei2"><a href="<?php echo $v['url'];?>" class="p12hei2"><?php echo str_cut($v[title], 52);?></a></td>
@@ -791,7 +791,7 @@ $(document).ready(function(){
                         <td width="352" height="174" align="left" valign="top">
 
 <div id="t1">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5e428118423dc84f3e07172735a6601b&action=lists&catid=50&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'50','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=5e428118423dc84f3e07172735a6601b&action=lists&catid=50&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'50','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                          
                           <table width="352" border="0" cellspacing="0" cellpadding="0">
                           <tr>
@@ -803,7 +803,7 @@ $(document).ready(function(){
 <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
 </div>                        
 <div id="t2"  style="display:none;">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=3a69d05e8d47c42eeda00b757b89fe97&action=lists&catid=51&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'51','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=3a69d05e8d47c42eeda00b757b89fe97&action=lists&catid=51&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'51','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                          
                           <table width="352" border="0" cellspacing="0" cellpadding="0">
                           <tr>
@@ -816,7 +816,7 @@ $(document).ready(function(){
 </div>
 
 <div id="t3"  style="display:none;">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=43b8129ebc90b5a79ed82845e66f8141&action=lists&catid=52&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'52','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=43b8129ebc90b5a79ed82845e66f8141&action=lists&catid=52&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'52','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                          
                           <table width="352" border="0" cellspacing="0" cellpadding="0">
                           <tr>
@@ -829,7 +829,7 @@ $(document).ready(function(){
 </div>
 
 <div id="t4" style="display:none;">
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=b55bde651b04842d556b78b186513ecd&action=lists&catid=53&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'53','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=b55bde651b04842d556b78b186513ecd&action=lists&catid=53&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'53','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>                          
                           <table width="352" border="0" cellspacing="0" cellpadding="0">
                           <tr>
@@ -849,7 +849,7 @@ $(document).ready(function(){
                           <tr>
                             <td width="352" height="174" align="left" valign="top">
 <div id="t5">                              
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=405da1fe07d3ff5a2af406fcb93dc637&action=lists&catid=57&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'57','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=405da1fe07d3ff5a2af406fcb93dc637&action=lists&catid=57&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'57','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>  
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                               <tr>
@@ -862,7 +862,7 @@ $(document).ready(function(){
 </div>
 
 <div id="t6" style="display:none;">                              
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=dc320e3fa114f61794d695d8f27115ed&action=lists&catid=58&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'58','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=dc320e3fa114f61794d695d8f27115ed&action=lists&catid=58&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'58','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>  
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                               <tr>
@@ -875,7 +875,7 @@ $(document).ready(function(){
 </div>  
 
 <div id="t7" style="display:none;">                              
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=4fbee240f0a9d44ac630469468f48b3e&action=lists&catid=59&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'59','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=4fbee240f0a9d44ac630469468f48b3e&action=lists&catid=59&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'59','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>  
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                               <tr>
@@ -920,7 +920,7 @@ $(document).ready(function(){
                         <td width="352" height="174" align="left" valign="top">
 
 <div id="t8"> 
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=b4fcf3e48efd75f9cfc11b9ada1b0e15&action=lists&catid=54&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'54','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=b4fcf3e48efd75f9cfc11b9ada1b0e15&action=lists&catid=54&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'54','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>  
                           <table width="352" border="0" cellspacing="0" cellpadding="0">
                           <tr>
@@ -933,7 +933,7 @@ $(document).ready(function(){
 </div>
 
 <div id="t9" style="display:none;"> 
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=98de0c16c9c7e9b76daec64bfed482ea&action=lists&catid=55&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'55','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=98de0c16c9c7e9b76daec64bfed482ea&action=lists&catid=55&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'55','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>  
                           <table width="352" border="0" cellspacing="0" cellpadding="0">
                           <tr>
@@ -946,7 +946,7 @@ $(document).ready(function(){
 </div>
 
 <div id="ta" style="display:none;"> 
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=cb62cc2816c425f75a4e9790e8108068&action=lists&catid=56&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'56','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=cb62cc2816c425f75a4e9790e8108068&action=lists&catid=56&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'56','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>  
                           <table width="352" border="0" cellspacing="0" cellpadding="0">
                           <tr>
@@ -968,7 +968,7 @@ $(document).ready(function(){
                             <td width="352" height="174" align="left" valign="top">
 
 <div id="tb">                               
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=edabeb9eef4363d0dc76624ab9dd45ff&action=lists&catid=108&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'108','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=edabeb9eef4363d0dc76624ab9dd45ff&action=lists&catid=108&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'108','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                               <tr>
@@ -982,7 +982,7 @@ $(document).ready(function(){
 </div>
 
 <div id="tc" style="display:none;">                               
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=6c6f2e45b411a48ac9da4216c1833d90&action=lists&catid=21&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'21','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=6c6f2e45b411a48ac9da4216c1833d90&action=lists&catid=21&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'21','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                               <tr>
@@ -996,7 +996,7 @@ $(document).ready(function(){
 </div>
 
 <div id="td" style="display:none;">                               
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7ef270e73a7f13c08cfc2653c638fc73&action=lists&catid=24&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'24','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7ef270e73a7f13c08cfc2653c638fc73&action=lists&catid=24&thumb=0&order=listorder+DESC&num=6\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'lists')) {$data = $content_tag->lists(array('catid'=>'24','thumb'=>'0','order'=>'listorder DESC','limit'=>'6',));}?>
 <?php $n=1;if(is_array($data)) foreach($data AS $v) { ?>
                               <table width="352" border="0" cellspacing="0" cellpadding="0">
                               <tr>
@@ -1244,7 +1244,7 @@ $(document).ready(function(){
                     <div class="yqlj">
                         <ul>
                             <li>
-<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"link\" data=\"op=link&tag_md5=028b3b82f9cd17a2ae78481517db2540&action=type_list&siteid=1&linktype=1&order=listorder+DESC&num=20&return=pic_link&typeid=53\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$link_tag = pc_base::load_app_class("link_tag", "link");if (method_exists($link_tag, 'type_list')) {$pic_link = $link_tag->type_list(array('siteid'=>'1','linktype'=>'1','order'=>'listorder DESC','typeid'=>'53','limit'=>'20',));}?>
+<?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"link\" data=\"op=link&tag_md5=028b3b82f9cd17a2ae78481517db2540&action=type_list&siteid=1&linktype=1&order=listorder+DESC&num=20&return=pic_link&typeid=53\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">修改</a>";}$link_tag = pc_base::load_app_class("link_tag", "link");if (method_exists($link_tag, 'type_list')) {$pic_link = $link_tag->type_list(array('siteid'=>'1','linktype'=>'1','order'=>'listorder DESC','typeid'=>'53','limit'=>'20',));}?>
         <?php $n=1;if(is_array($pic_link)) foreach($pic_link AS $v) { ?>
         <a href="<?php echo $v['url'];?>" target="_blank"><img src="<?php echo $v['logo'];?>" width="98" height="36"/></a>
         <?php $n++;}unset($n); ?>
