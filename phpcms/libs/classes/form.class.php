@@ -380,6 +380,7 @@ class form {
 	 */
 	public static function checkcode($id = 'checkcode',$code_len = 4, $font_size = 20, $width = 130, $height = 50, $font = '', $font_color = '', $background = '') {
 		//return "<img id='$id' onclick='this.src=this.src+\"&\"+Math.random()' src='".SITE_PROTOCOL.SITE_URL.WEB_PATH."api.php?op=checkcode&code_len=$code_len&font_size=$font_size&width=$width&height=$height&font_color=".urlencode($font_color)."&background=".urlencode($background)."'>";
+		
 		$checkcode = pc_base::load_sys_class('checkcode');
 		$filename=$checkcode->doimage();
 		$_SESSION['code']=$checkcode->get_code();

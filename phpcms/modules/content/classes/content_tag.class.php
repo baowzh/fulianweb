@@ -69,9 +69,7 @@ class content_tag {
 			}
 		}
 		$order = $data['order'];
-
-		$return = $this->db->select($sql, '*', $data['limit'], $order, '', 'id');
-						
+		$return = $this->db->select($sql, '*', $data['limit'], $order, '', 'id');		
 		//调用副表的数据
 		if (isset($data['moreinfo']) && intval($data['moreinfo']) == 1) {
 			$ids = array();

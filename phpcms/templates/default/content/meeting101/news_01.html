@@ -1,0 +1,45 @@
+<?php
+    $P = APP_PATH . "/phpcms/templates/default/content/meeting101";
+?>
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+<meta charset="UTF-8">
+<title>喜迎内蒙古妇女第十一次代表大会召开</title>
+<link type="text/css" href="{$P}/style/css.css" rel="stylesheet">
+</head>
+<body>
+<div class="nev"><img src="{$P}/style/images/nev.png" usemap="#Map"/>
+  <map name="Map">
+    <area shape="rect" coords="129,11,221,47" href="{$CATEGORYS[138][url]}">
+     <area shape="rect" coords="247,14,343,46" href="{$CATEGORYS[139][url]}">
+    <area shape="rect" coords="375,12,473,43" href="{$CATEGORYS[140][url]}">
+    <area shape="rect" coords="511,14,600,45" href="{$CATEGORYS[141][url]}">
+    <area shape="rect" coords="641,11,732,45" href="{$CATEGORYS[142][url]}">
+    <area shape="rect" coords="774,6,871,45"  href="{$CATEGORYS[143][url]}">
+    <area shape="rect" coords="904,12,1005,46" href="{$CATEGORYS[144][url]}">
+  </map>
+</div>
+<div class="center">
+  <div class="tipzy">您当前位置：<a href="{APP_PATH}" >首页</a>><a href="{$CATEGORYS[138][url]}">新闻列表</a></div>
+  <div class="ziyenews">
+    <h2>新闻列表</h2>
+    <ul>
+     {pc:content action="lists" catid="$catid" num="3" order="id DESC" page="$page" }
+     {loop $data $v} 
+      <li><a href="{$v[url]}" target="_blank">{$v[title]}</a> <span>{date('Y-m-d',$v[inputtime])}</span>
+      </li>
+      {/loop}
+      <div id="pages" style="width:700px;">
+      {$pages}
+      </div>
+      {/pc} 
+    </ul>
+  </div>
+</div>
+<div class="foot">
+  <p>京ICP备010223号 Copyright©2000 women.org.cn　All　rights　reserved</p>
+  <p>版权所有:中华全国妇女联合会 </p>
+</div>
+</body>
+</html>

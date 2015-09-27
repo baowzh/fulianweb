@@ -25,7 +25,6 @@ class index extends admin {
 	
 	public function login() {
 		if(isset($_GET['dosubmit'])) {
-			
 			//不为口令卡验证
 			if (!isset($_GET['card'])) {
 				$username = isset($_POST['username']) ? trim($_POST['username']) : showmessage(L('nameerror'),HTTP_REFERER);

@@ -147,6 +147,7 @@ class checkcode {
 	 * 输出图片
 	 */
 	protected function output($img) {
+		
 		$this->filename=time () . rand ( 1000, 9999 ).".jpeg";
 		imagejpeg ( $img,PHPCMS_PATH.'validcode/'.$this->filename, 100 );
 		imagedestroy($img);

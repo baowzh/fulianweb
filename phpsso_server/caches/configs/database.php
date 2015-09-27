@@ -5,7 +5,7 @@ return array (
 		'hostname' => 'localhost',
 		'database' => 'fuliancms',
 		'username' => 'root',
-		'password' => '99034203',
+		'password' => 'mysql',
 		'tablepre' => 'v9_sso_',
 		'charset' => 'utf8',
 		'type' => 'mysql',

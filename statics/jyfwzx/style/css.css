@@ -1,0 +1,539 @@
+/*
+Site: 妇联教育
+Author: wuqing
+E-mail: 54581768@qq.com
+*/
+html, body, form, div, input, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+body {
+    text-align: center;
+    line-height: 1.2em;
+    font-family: 'Microsoft YaHei', 'Hiragino Sans GB', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    margin: 0 0;
+    padding: 0 0;
+    background: url(../style/images/bg.jpg) #f9f9f9 repeat-y top center;
+}
+
+textarea {
+    font-size: 12px;
+    line-height: 1.2em;
+    font-family: 'Microsoft YaHei', 'Hiragino Sans GB', Helvetica, Arial, 'Lucida Grande', sans-serif;
+    overflow: auto;
+}
+
+img, input, button, select {
+    vertical-align: middle;
+}
+
+select {
+    background: #fff;
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    color: #030005;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #f60;
+}
+
+a img {
+    border: 0;
+}
+
+table {
+    border-collapse: collapes;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+
+.input_sr {
+    border: 1px solid #999;
+}
+
+i, em {
+    font-style: normal;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+/*公共部分结束*/
+
+header {
+    width: 100%;
+    color: #666;
+    display: block;
+    height: 480px;
+
+}
+
+.nav {
+    z-index: 2;
+    position: relative;
+    bottom: 54px;
+    left: 0;
+    width: 100%;
+    background: url(../style/images/dhbg.png) repeat-x bottom left;
+    height: 60px;
+}
+
+.nav ul {
+    margin: 0 auto;
+    width: 1000px;
+    overflow: hidden;
+    height: 60px;
+}
+
+.nav ul li {
+    float: left;
+    line-height: 60px;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 10px;
+    width: 116px;
+    background: url(../style/images/daohline.jpg) no-repeat center right;
+}
+
+.nav ul li a {
+    color: #fff;
+}
+
+.nav ul li.bgrig {
+    padding-right: 0;
+    background: none;
+}
+
+.center {
+    clear: both;
+    width: 1000px;
+    margin: 0 auto;
+    background: url(../style/images/cenbgrx.jpg) repeat-x top left;
+    overflow: hidden;
+}
+
+.leftbox {
+    float: left;
+    width: 244px;
+    margin: 15px 10px;
+
+}
+
+.rightbox {
+    float: left;
+    width: 730px;
+    margin: 15px 0px;
+}
+
+.news01 {
+    width: 728px;
+    border: #fed295 1px solid;
+    overflow: hidden;
+}
+.news02 h2,
+.news01 h2 {
+    padding: 5px 10px 0;
+    overflow: hidden;
+    border-bottom: #fed295 1px solid;
+    background: #fff;
+}
+.news02 h2 span,
+.news01 h2 span {
+    float: left;
+}
+.news01 h2 .more {
+    float: right;
+    width: 45px;
+    height: 32px;
+    background: url(../style/images/more.jpg) no-repeat center left;
+}
+
+.imgbox {
+    width: 324px;
+    height: 260px;
+    border: 2px solid #f0f0f0;
+    margin: 10px;
+    float: left;
+}
+.hot{
+    border-bottom:#636363 dashed 1px;
+    width: 370px;
+    font-size: 14px;
+    line-height: 28px;
+    float: left;
+    text-align: left;
+    margin-top: 6px;
+    padding-bottom: 4px;
+}
+.hot h3{
+    color: #cf0006;
+    font-weight: bold;
+}
+.hot02 p,
+.hot p{
+    color: #333333;
+}
+.newslist{
+    display: block;
+    overflow: hidden;
+    float: left;
+    width: 370px;
+    height: 170px;
+    font-size: 12px;
+    margin: 6px 0;
+}
+.newslist li{
+    padding-left: 15px;
+    background: url(../style/images/ico01.jpg) no-repeat center left;
+    line-height:28px;
+    color: #404040;
+    text-align: left;
+    overflow: hidden;
+    display: block;
+}
+.newslist li a{
+    float: left;
+    color: #404040;
+    width: 280px;
+}
+.newslist li span{
+    float: right;
+    width:70px ;
+}
+.news02{
+    width: 360px;
+    border: #fed295 1px solid;
+    overflow: hidden;
+    margin-top:8px;
+    float: left;
+}
+.imgbox02{
+    width: 96px;
+    height: 88px;
+    border:1px solid #ffd2a1;
+    margin-right: 10px;
+    float: left;
+}
+.hot02{
+    font-size: 12px;
+    line-height:20px;
+    float: left;
+    text-align: left;
+    width: 222px;
+}
+.hot02 h3 {
+    color: #db671a;
+    font-weight: bold;
+}
+.hot02 a{
+    color: #c1130c;
+}
+.news02 ul{
+    width: 330px;
+    overflow: hidden;
+    float: left;
+    text-align: left;
+    line-height: 22px;
+    margin-top: 8px;
+}
+.news02 li{
+    padding-left: 15px;
+    background: url(../style/images/ico03.jpg) no-repeat center left;
+    line-height:24px;
+    color: #616161;
+    text-align: left;
+    overflow: hidden;
+    display: block;
+}
+.news03 li a,
+.news02 li a{
+    float: left;
+    color: #616161;
+    width: 240px;
+}
+.news03 li span,
+.news02 li span{
+    float: right;
+    width:70px ;
+}
+.more02 {
+    float: right;
+    width: 40px;
+    height: 18px;
+    background: url(../style/images/more.jpg) no-repeat center left;
+}
+.news03{
+    background: #f5f5f5;
+    float: left;
+    width: 365px;
+    overflow: hidden;
+    margin-top: 8px;
+}
+.news03 ul{
+    border-radius:4px 4px 4px 4px;
+    background: #fff;
+    display: block;
+    overflow: hidden;
+    margin: 6px;
+    padding: 4px;
+}
+.news03 ul li{
+    padding-left: 15px;
+    background: url(../style/images/ico02.jpg) no-repeat center left;
+    line-height:24px;
+    color: #616161;
+    text-align: left;
+    overflow: hidden;
+    display: block;
+}
+.Photo{
+    border: #f2b46b 1px solid;
+    border-radius:4px 4px 4px 4px;
+    box-shadow: inset 0px 0px 20px #fbecce;
+    margin:4px 8px 8px;
+    float: left;
+    width: 982px;
+}
+.tit02{
+    background: #fff;
+    color: #d21914;
+    font-size: 16px;
+    padding: 6px 10px;
+    font-weight: bold;
+    position: relative;
+    top: -14px;
+    left: 30px;
+    width: 80px;
+}
+.Photo ul{
+    margin:5px 10px;
+    overflow: hidden;
+}
+.Photo ul li{
+    width: 144px;
+    margin: 3px 8px;
+    float: left;
+    line-height: 28px;
+    color: #410e0a;
+}
+.bottom{
+    width: 100%;
+    background: #d21914;
+    color: #fff;
+    padding: 15px 0;
+    line-height: 28px;
+}
+
+.newstab{
+    overflow: hidden;
+}
+.newstab h2{
+    background: url(../style/images/linstbg.jpg) repeat-x bottom left;
+    padding:0 4px 8px;
+    line-height:36px;
+    color: #919191;
+    font-size: 12px;
+    text-align: left;
+    font-weight: normal;
+}
+.newstab h2 b{
+    font-size: 14px;
+    color: #e6181a;
+    font-weight: bold;
+}
+.newstab h2 a{
+    color: #919191;
+}
+.newstab h2 a:hover{
+    color: #e6181a;
+}
+.newstab ul{
+    overflow: hidden;
+    padding: 15px 0;
+    display: block;
+    background: #f9f9f9;
+}
+.newstab ul li{
+    margin:15px 15px 0;
+    overflow: hidden;
+    display: block;
+    border-bottom: #afafaf 1px dashed;
+    padding-bottom: 15px;
+}
+.imgbox03{
+    width: 150px;
+    height: 94px;
+    background: #dbdbdb;
+    float: left;
+    margin-right: 10px;
+}
+.newstab h3{
+    overflow:hidden;
+    height: 28px;
+    line-height: 28px;
+}
+.newstab h3 a{
+    background: url(../style/images/newslsbj01.jpg) no-repeat 5px center;
+    padding:0 10px 0 25px ;
+    font-size: 14px;
+    font-weight: bolder;
+    color: #4b4b4b;
+    float: left;
+    display: block;
+
+}
+.newstab h3 a:hover{
+    background: url(../style/images/newslsbj02.jpg)#d52525 no-repeat 5px center;
+    color: #fff;
+
+}
+.newstab h3 span{
+    display: block;
+    float: right;
+    font-size: 12px;
+    color: #cf001d;
+    font-weight: normal;
+}
+
+.newstab ul p{
+     color: #888888;
+     font-size: 12px;
+     line-height: 24px;
+     text-align: left;
+     padding: 5px 5px 5px 5px;
+     width: 530px;
+     float: left;
+ }
+.newstab ul p a{
+    color: #be0419;
+}
+.newscen{
+    background: #f9f9f9;
+    padding: 15px;
+
+}
+.newscen h4{
+    border-bottom: #afafaf 1px dashed;
+    background: #fff;
+    padding: 10px 10px 0;
+    line-height: 28px;
+}
+.newscen h4 b{
+    text-align: center;
+    color: #be0419;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+.newscen h4 p{
+    text-align: left;
+    font-size: 12px;
+    font-weight: normal;
+    color: #696969;
+}
+.wzcen{
+    padding: 15px;
+    background: #fff;
+    line-height: 22px;
+    min-height: 600px;
+    text-align: left;
+}
+.FocusPic {
+	zoom: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.FocusPic .content {
+	overflow: hidden;
+}
+
+.FocusPic .changeDiv a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.FocusPic .changeDiv a  img {
+	width: 530px;
+	height: 300px;
+}
+
+.title {
+	position: absolute;
+	left: 0px;
+	bottom: 0;
+	width: 195px;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+	text-align: left;
+   text-overflow: ellipsis;
+}
+
+.FocusPic .title a {
+	display: block;
+	padding-left: 15px;
+	color: #fff;
+	font-size: 12px;
+	overflow: hidden;
+	text-align: left;
+   text-overflow: ellipsis;
+}
+
+.FocusPic .title-bg {
+	background: #666;
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+.FocusPic .change {
+	bottom: 0px;
+	height: 20px;
+	right: 3px;
+	_right: 4px;
+	position: absolute;
+	text-align: right;
+	z-index: 9999;
+}
+
+.FocusPic .change i {
+	background: #666;
+	color: #FFF;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 12px;
+	margin-right: 2px;
+	padding: 2px 6px;
+	font-style: normal;
+	height: 12px;
+	display: inline-block;
+	display: -moz-inline-stack;
+	zoom: 1;
+}
+.FocusPic .change i.cur {
+  background: #FF7700;
+}
+
+
+

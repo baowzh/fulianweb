@@ -30,6 +30,7 @@ margin-left:-280px;position:absolute;width:560px; overflow:visible;}
 	if(top!=self)
 	if(self!=top) top.location=self.location;
 //-->
+// 验证改为js获取
 var switchvalidcode=function(){
   var imgsrc='';
   $.ajax({

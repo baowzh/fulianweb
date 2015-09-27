@@ -2,7 +2,6 @@
 /*
  * 客户端被动接收phpsso服务端通知
  * 服务端通知内容:同步登陆、退出，同步积分设置、对换比率，同步添加、删除用户、修改用户密码，测试通信状态
- * 
  */
 defined('IN_PHPCMS') or exit('No permission resources.'); 
 $session_storage = 'session_'.pc_base::load_config('system','session_storage');

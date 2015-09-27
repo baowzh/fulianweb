@@ -1,0 +1,216 @@
+<?php
+    $P = APP_PATH . "/phpcms/templates/default/content/meeting101";
+?>
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+<meta charset="UTF-8">
+<title>喜迎内蒙古妇女第十一次代表大会召开</title>
+<link type="text/css" href="{$P}/style/css.css" rel="stylesheet">
+<script type="text/javascript" src="{JS_PATH}jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="{$P}/style/js/jquery.sgallery.js" ></script>
+</head>
+<body>
+<div class="nev"><img src="{$P}/style/images/nev.png" usemap="#Map"/>
+  <map name="Map">
+    <area shape="rect" coords="129,11,221,47" href="{$CATEGORYS[138][url]}">
+    <area shape="rect" coords="247,14,343,46" href="{$CATEGORYS[139][url]}">
+    <area shape="rect" coords="375,12,473,43" href="{$CATEGORYS[140][url]}">
+    <area shape="rect" coords="511,14,600,45" href="{$CATEGORYS[141][url]}">
+    <area shape="rect" coords="641,11,732,45" href="{$CATEGORYS[142][url]}">
+    <area shape="rect" coords="774,6,871,45"  href="{$CATEGORYS[143][url]}">
+    <area shape="rect" coords="904,12,1005,46" href="{$CATEGORYS[144][url]}">
+  </map>
+</div>
+<div class="center">
+ {pc:content  action="position" catid="138" posid="1" thumb="1" order="id DESC" num="1"}
+                               {loop $data $v} 
+  <div class="tips"> {$v[title]}</div>
+   {/loop}
+                               {/pc}   
+  <div class="newsimg">
+              <div id="gallery">
+                      <div class="FocusPic" style="overflow:hidden;height:300px;width:530px;">
+                                              <div class="content" id="main-slide" style="width: 530px; height: 300px;">
+                              <div class="changeDiv"> 
+                               {pc:content  action="lists" catid="138" posid="0" thumb="1" order="listorder DESC" num="5"}
+                               {loop $data $v} 
+                                 <a href="{$v[url]}" title="{$v[title]}" target="_blank" >
+                                 <img src="{$v[thumb]}" alt="{$v[title]}"  border="0"></a>
+                                {/loop}
+                               {/pc}                
+                               </div>
+                                                  
+                          </div>                       
+                    </div>   
+                </div>
+            </div>
+            
+  <div class="newslist">
+     {pc:content action="lists" posid="1"  catid="140"  order="listorder DESC" num="1"  moreinfo="1" }
+     {loop $data $v}
+    <div class="storfot">
+      <h3>{$v[title]}</h3>
+      <p>{$v[content]}</p>
+    </div>
+     {/loop}
+     {/pc}
+    <div class="newest_main2_left1_nr2">
+      <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse">
+        <tbody>
+        {pc:content action="position" posid="1"  catid="140"  order="listorder DESC" num="6"}
+          {if $data}
+          {loop $data $v}
+          <tr style="font-size:14px;">
+            <td align="left"><a href="{$v[url]}" target="_blank">·
+                           {str_cut($v[title],100)}
+                           </a></td>
+          </tr>
+          {/loop}
+      {/if}
+     {/pc}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <div class="mewslfe">
+    <div class="bifort02 mankrig" >领导讲话</div>
+    <div class="news_box">
+     {pc:content  action="lists" catid="140" posid="0" thumb="0" order="listorder DESC" num="1"  moreinfo="1"}
+                            {loop $data $v}
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr >
+          <td width="33%" rowspan="2"><img src="{$v[thumb]}" width="85" height="61"></td>
+          <td width="67%" style=" color:#323232; font-size:12px; font-weight:bold; line-height:20px;"> {str_cut($v[title],69)}</td>
+        </tr>
+        <tr>
+          <td height="48" >
+           <span style="height:20px;width:207px;display:inline-block;overflow:hidden;">
+             {$v[content]}
+           </span>
+          <span style="color:#b10808;"><a href="{$v[url]}" style="color:#b10808">[详情]</a></span>
+          </td>
+        </tr>
+      </table>
+       {/loop}
+        {/pc}
+      <div class="lined">&nbsp;</div>
+      <div class="newest_main2_left1_nr2">
+        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; color:#8d8d8d;">
+          <tbody>
+          {pc:content  action="lists" catid="140" posid="0" thumb="0" order="listorder DESC" num="6"}
+                            {loop $data $v}
+           <tr style="font-size:12px;color:#8d8d8d;">
+              <td align="left"><a href="{$v[url]}" target="_blank">·
+                 {str_cut($v[title],69)}
+                </a></td>
+            </tr>
+         {/loop}
+        {/pc}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="mewslfe mankrig">
+    <div class="bifort02" >各地动态</div>
+    <div class="news_box">
+     {pc:content  action="lists" catid="144" posid="0" thumb="0" order="listorder DESC" num="1"  moreinfo="1"}
+                            {loop $data $v}
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr >
+          <td width="33%" rowspan="2"><img src="{$v[thumb]}" width="85" height="61"></td>
+          <td width="67%" style=" color:#323232; font-size:12px; font-weight:bold; line-height:20px;">{str_cut($v[title],58)}</td>
+        </tr>
+        <tr>
+          <td height="48" >
+            <span style="height:20px;width:207px;display:inline-block;overflow:hidden;">{$v[content]}</span>
+            <span style="color:#b10808;">[详情]</span>
+          </td>
+        </tr>
+      </table>
+       {/loop}
+        {/pc}
+      <div class="lined">&nbsp;</div>
+      <div class="newest_main2_left1_nr2">
+        <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; color:#8d8d8d;">
+          <tbody>
+            {pc:content  action="lists" catid="144" posid="0" thumb="0" order="listorder DESC" num="6"}
+                            {loop $data $v}
+           <tr style="font-size:12px;color:#8d8d8d;">
+              <td align="left"><a href="{$v[url]}" target="_blank">·
+                 {str_cut($v[title],69)}
+                </a></td>
+            </tr>
+          {/loop}
+         {/pc}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="mewslfe">
+    <div class="bifort02" >大会议程</div>
+    <div class="news_box">
+      {pc:content  action="lists" catid="143" posid="0" thumb="0" order="listorder DESC" num="4" moreinfo="1"}
+            {php $j=1;}
+          {loop $data $v}
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr >
+          <td width="100%" style=" color:#323232; font-size:12px; font-weight:bold; line-height:20px;"><em> {php echo $j}.</em>
+           {str_cut($v[title],69)}</td>
+        </tr>
+        <tr>
+          <td height="100%" >
+            <span style="height:20px;width:237px;display:inline-block;overflow:hidden;color: #909090;">
+            <a href="{$v[url]}"> {$v[content]}</a>
+            </span>
+            <span style="color:#b10808;"><a href="{$v[url]}" style="color:#b10808">[详情]</a></span>
+          </td>
+        </tr>
+      </table>
+      <div class="lined"></div>
+      {$j++}
+      {/loop}
+      {/pc}
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!--五年成就开始-->
+  <div class="news_tw">
+    <h2>五年成就</h2>
+    <ul>
+       {pc:content  action="lists" catid="141" posid="0" thumb="0" order="listorder DESC" num="8"}
+         {loop $data $v}
+      <li><img src="{$v[thumb]}" width="224" style="width:223px;height:115px;"/>
+        <p>{str_cut($v[title],69)}</p>
+      </li>
+       {/loop}
+       {/pc}
+    </ul>
+  </div>
+  <div class="news_ld">
+    <h2>代表风采</h2>
+    <ul>
+       {pc:content  action="lists" catid="142" posid="0" thumb="0" order="listorder DESC" num="7"}
+          {loop $data $v}
+         <li><img src="{$v[thumb]}" width="120" height="145"/>
+        <p>{str_cut($v[title],69)}</p>
+      </li> 
+        {/loop}
+       {/pc}
+    </ul>
+  </div>
+</div>
+<div class="foot">
+  <p>蒙ICP备 06006126号-1 版权所有：内蒙古自治区妇女联合会</p>
+  <p>copyright@2008inner mongolia women's federation all rights reserved </p>
+</div>
+</body>
+<script type="text/javascript"> 
+$(function(){
+   new slide("#main-slide","cur",530,300,1);//焦点图
+})  
+</script>
+</html>

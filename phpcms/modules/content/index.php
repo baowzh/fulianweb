@@ -34,18 +34,15 @@ class index {
 	public function show() {
 		$catid = intval($_GET['catid']);
 		$id = intval($_GET['id']);
-
 		if(!$catid || !$id) showmessage(L('information_does_not_exist'),'blank');
 		$_userid = $this->_userid;
 		$_username = $this->_username;
 		$_groupid = $this->_groupid;
-
 		$page = intval($_GET['page']);
 		$page = max($page,1);
 		$siteids = getcache('category_content','commons');
 		$siteid = $siteids[$catid];
 		$CATEGORYS = getcache('category_content_'.$siteid,'commons');
-		
 		if(!isset($CATEGORYS[$catid]) || $CATEGORYS[$catid]['type']!=0) showmessage(L('information_does_not_exist'),'blank');
 		$this->category = $CAT = $CATEGORYS[$catid];
 		$this->category_setting = $CAT['setting'] = string2array($this->category['setting']);
@@ -233,7 +230,6 @@ class index {
 
 		$template = $setting['category_template'] ? $setting['category_template'] : 'category';
 		$template_list = $setting['list_template'] ? $setting['list_template'] : 'list';
-		
 		if($type==0) {
 			$template = $child ? $template : $template_list;
 			$arrparentid = explode(',', $arrparentid);
@@ -361,6 +357,7 @@ class index {
 	 	$_SESSION['code']=$checkcode->get_code();
 	 	$returncode=array('patch'=>SITE_PROTOCOL.SITE_URL.WEB_PATH.'validcode/'.$filename);
 	 	$json = json_encode($returncode);
+	 	
 	 	echo $json;
 	 }
 }

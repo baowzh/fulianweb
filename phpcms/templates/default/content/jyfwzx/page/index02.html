@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head lang="zh-cn">
+    <meta charset="UTF-8">
+    <?php
+    $P = APP_PATH;
+?>
+    <title>妇联教育专题-首页</title>
+    <link type="text/css" href="statics/jyfwzx/style/css.css" rel="stylesheet">
+    <script type="text/javascript" src="statics/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="statics/jyfwzx/style/js/jquery.sgallery.js" ></script>
+     <script type="text/javascript" src="statics/jyfwzx/style/js/utilities.js" ></script>
+    <script type="text/javascript" src="statics/jyfwzx/style/js/sodon-min.js" ></script>
+    <script type="text/javascript" src="statics/jyfwzx/style/js/scrollview-min.js" ></script>
+   
+    
+</head>
+<body>
+<header>
+    <div><img src="statics/jyfwzx/style/images/banner.jpg" width="100%"/></div>
+    <div class="nav">
+        <ul>
+            <li><a href="{$CATEGORYS[145][url]}"> 首页</a></li>
+            <li><a href="{$CATEGORYS[146][url]}"> 最新动态</a></li>
+            <li><a href="{$CATEGORYS[147][url]}"> 热点聚焦</a></li>
+            <li><a href="{$CATEGORYS[148][url]}"> 教育视点</a></li>
+            <li><a href="{$CATEGORYS[149][url]}"> 家教读物</a></li>
+            <li><a href="{$CATEGORYS[150][url]}"> 家长课堂</a></li>
+            <li><a href="{$CATEGORYS[151][url]}"> 草原彩虹</a></li>
+            <li class="bgrig"><a href="{$CATEGORYS[152][url]}"> 悦读时光</a></li>
+        </ul>
+    </div>
+</header>
+<div class="center">
+    <div class="leftbox">
+        <div><img src="statics/jyfwzx/style/images/daohang.jpg" usemap="#Map"/>
+          <map name="Map">
+            <area shape="rect" coords="29,76,213,115" href="mailto:example@example.com" alt="家教中心">
+            <area shape="rect" coords="26,137,214,179" href="{$CATEGORYS[149][url]}" alt="家教读物">
+            {pc:content  action="lists" catid="154" posid="0"  order="listorder DESC" num="1"}
+             {if $data}
+             {loop $data $v} 
+                <area shape="rect" coords="30,195,204,237" href="{$v[url]}" alt="联系方式">
+              {/loop}
+              {else}
+              <area shape="rect" coords="30,195,204,237" href="#" alt="联系方式">
+             {/if}
+             {/pc} 
+          </map>
+        </div>
+        <div style="margin-top: 15px;"><img src="statics/jyfwzx/style/images/guangg01.jpg"/></div>
+        <div style="margin-top: 20px;"><img src="statics/jyfwzx/style/images/guangg02.jpg"/></div>
+    </div>
+    <div class="rightbox">
+        <div class="news01">
+            <h2><span><img src="statics/jyfwzx/style/images/zxdt.jpg"/></span><a class="more" href="{$CATEGORYS[146][url]}"></a></h2>
+            <div class="imgbox">
+              <div id="gallery">
+                      <div class="FocusPic" style="overflow:hidden;height:278px;width:324px;">
+                                              <div class="content" id="main-slide" style="width: 324px; height: 278px;">
+                              <div class="changeDiv"> 
+                               {pc:content  action="lists" catid="155"  thumb="1" order="listorder DESC" num="5"}
+                               {loop $data $v} 
+                                 <a href="{$v[url]}" title="{$v[title]}" target="_blank" >
+                                 <img src="{$v[thumb]}" alt="{$v[title]}"  border="0" style="width: 324px; height: 278px;"></a>
+                                {/loop}
+                               {/pc}                
+                               </div>
+                                                  
+                          </div>                       
+                    </div>   
+                </div>
+            </div>
+              {pc:content  action="position"  catid="146" posid="2"  order="id DESC" num="1"}
+              {loop $data $v} 
+              <div class="hot"><h3>         
+              <a href="{$v[url]}" style="color: #cf0006;font-weight: bold;">
+              {$v[title]}</a>                        
+              </h3>
+                  {pc:get sql="select * from v9_news_data where id=$v[id]" return="data1"}
+                  {loop $data1 $r}
+                    <p>{str_cut(strip_tags($r[content]),200)}</p>
+                  {/loop}
+                  {/pc}               
+             </div>
+              {/loop}
+            {/pc} 
+            <ul class="newslist">
+            {pc:content  action="lists" catid="146" where="catid=146 and posids=0 "  order="id DESC" num="6"}
+               {loop $data $v} 
+                <li><a  href="{$v[url]}" style="height:28px;width:280px;overflow:hidden;">{$v[title]}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+               {/loop}
+            {/pc}          
+            </ul>
+        </div>
+        <div class="news02" style="margin-right:6px;">
+            <h2><span><img src="statics/jyfwzx/style/images/rdjj.jpg"/></span><a class="more02" href="{$CATEGORYS[147][url]}"></a></h2>
+            <div style="padding:15px; overflow: hidden;min-height:210px;">
+                {pc:content  action="position"  catid="147" posid="2" thumb="1" order="id DESC" num="1"}
+                {loop $data $v} 
+                <div class="imgbox02">
+                 <img src="{$v[thumb]}" style="width:95px;height:87px;"/>
+                </div>
+                <div class="hot02"><h3> {$v[title]}</h3>
+                  {pc:get sql="select * from v9_news_data where id=$v[id]" return="data1"}
+                  {loop $data1 $r}
+                    {str_cut(strip_tags($r[content]),200)}<a href="{$v[url]}">[查看详情]</a>
+                  {/loop}
+                  {/pc}   
+                  </p>            
+                </div>
+                {/loop}
+                {/pc} 
+                <ul>
+                {pc:content  action="lists" catid="147" where="catid=147 and posids=0 "  order="id DESC" num="4"}
+                {loop $data $v} 
+                    <li><a href="{$v[url]}" style="height:24px;width:240px;overflow:hidden;">{$v[title]}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+                     {/loop}
+                {/pc}  
+                </ul>
+            </div>
+        </div>
+        <div class="news02">
+            <h2><span><img src="statics/jyfwzx/style/images/jysd.jpg"/></span><a class="more02" href="{$CATEGORYS[148][url]}"></a></h2>
+            <div style="padding:15px; overflow: hidden;min-height:210px;">
+                {pc:content  action="position"  catid="148"  posid="2"  order="id DESC" num="1"}
+                {loop $data $v} 
+                <div class="imgbox02">
+                <img src="{$v[thumb]}" style="width:95px;height:87px;"/>
+                </div>
+                <div class="hot02"><h3> {$v[title]}</h3>
+                 <p>
+                  {pc:get sql="select * from v9_news_data where id=$v[id]" return="data1"}
+                  {loop $data1 $r}
+                    {str_cut(strip_tags($r[content]),200)}<a href="{$v[url]}">[查看详情]</a>
+                  {/loop}
+                  {/pc}   
+                  </p>             
+                </div>
+                {/loop}
+                {/pc}
+               
+                <ul>
+               {pc:content  action="lists" catid="148" where="catid=148 and posids=0 "  order="id DESC" num="4"}
+               {loop $data $v} 
+                    <li><a href="{$v[url]}" style="height:24px;width:240px;overflow:hidden;">{$v[title]}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+               {/loop}
+               {/pc}  
+                </ul>
+            </div>
+        </div>
+        <div class="news03" style="border-radius:4px 0 0 4px;">
+            <h3><a href="{$CATEGORYS[149][url]}"><img src="statics/jyfwzx/style/images/jjduw.jpg" width="100%"/></a></h3>
+            <ul style="min-height:148px;">
+               {pc:content  action="lists" catid="149" where="catid=149 and posids=0 "  order="id DESC" num="6"}
+               {loop $data $v} 
+                    <li><a href="{$v[url]}" style="height:24px;width:240px;overflow:hidden;"> {str_cut($v[title],62)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+               {/loop}
+               {/pc}  
+               
+            </ul>
+        </div>
+        <div class="news03" style="border-radius:0 4px 4px 0;">
+            <h3><a href="{$CATEGORYS[150][url]}"><img src="statics/jyfwzx/style/images/jzkt.jpg" width="100%"/></a></h3>
+            <ul style="min-height:148px;">
+               {pc:content  action="lists" catid="150" where="catid=150 and posids=0 "  order="id DESC" num="6"}
+               {loop $data $v} 
+                    <li><a href="{$v[url]}" style="height:24px;width:240px;overflow:hidden;"> {str_cut($v[title],62)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+               {/loop}
+               {/pc}             
+            </ul>
+        </div>
+        <div class="news03" style="border-radius:4px 0 0 4px;">
+            <h3><a href="{$CATEGORYS[151][url]}"><img src="statics/jyfwzx/style/images/tssl.jpg" width="100%"/></a></h3>
+            <ul style="min-height:148px;">
+            {pc:content  action="lists" catid="151" where="catid=151 and posids=0 "  order="id DESC" num="6"}
+               {loop $data $v} 
+                    <li><a href="{$v[url]}" style="height:24px;width:240px;overflow:hidden;"> {str_cut($v[title],62)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+               {/loop}
+               {/pc}    
+            </ul>
+        </div>
+        <div class="news03" style="border-radius:0 4px 4px 0;">
+            <h3><a href="{$CATEGORYS[152][url]}"><img src="statics/jyfwzx/style/images/ydsg.jpg" width="100%"/></a></h3>
+            <ul style="min-height:148px;">
+             {pc:content  action="lists" catid="152" where="catid=152 and posids=0 "  order="id DESC" num="6"}
+               {loop $data $v} 
+                    <li><a href="{$v[url]}" style="height:24px;width:240px;overflow:hidden;"> {str_cut($v[title],62)}</a><span>{date('Y-m-d',$v[inputtime])}</span></li>
+               {/loop}
+               {/pc}
+            </ul>
+        </div>
+
+    </div>
+    <div class="Photo">
+        <div class="tit02">图片库</div>
+        <div id="gallerybox" style="width: 1100px;height:142px;overflow:hidden;">
+        <ul >
+            {pc:content  action="lists" catid="153" where="catid=153 and posids=0 "   moreinfo="1"  order="id DESC" num="1"}
+               {loop $data $v}
+               {loop string2array($v['pictureurls']) $pic_k $r} 
+                <Li>
+               <img src="{$r[url]}" style="width:143px;height:107px;">
+                <P>{$r[alt]}</P>
+            </Li>
+            {/loop} 
+              {/loop}
+            {/pc} 
+        </ul>
+        </div>
+    </div>
+</div>
+<div class="bottom">
+    <p>蒙ICP备 06006126号-1 版权所有：内蒙古自治区妇女联合会</p>
+    <p>copyright@2008inner mongolia women's federation all rights reserved</p></div>
+</body>
+<script type="text/javascript"> 
+$(function(){
+   new slide("#main-slide","cur",324,258,1);//焦点图
+})  
+	function AutoScroll(obj) {
+		//alert(1);
+		$(obj).find("ul:first").animate({
+			
+		}, 100, function() {
+			$(this).css({
+			}).find("li:first").appendTo(this);
+		});
+	}
+	$(document).ready(function() {
+		setInterval('AutoScroll("#gallerybox")', 2000);
+	});
+
+</script>
+</html>
