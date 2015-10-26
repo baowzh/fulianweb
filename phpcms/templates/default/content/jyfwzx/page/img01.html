@@ -1,20 +1,18 @@
-<?php if ($catid == 153):?>
- {template "content/jyfwzx/page" , "img01"}  
- <?php exit;?>
- <?php endif;?>
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head lang="zh-cn">
     <meta charset="UTF-8">
     <title>妇联教育专题-首页</title>
     <link type="text/css" href="statics/jyfwzx/style/css.css" rel="stylesheet">
+    <script type="text/javascript" src="statics/js/jquery-1.11.0.min.js"></script>
+    <script src="statics/jyfwzx/style/js/galleria-1.4.2.min.js"></script>
 </head>
 <body>
 <header>
     <div><img src="statics/jyfwzx/style/images/banner.jpg" width="100%"/></div>
     <div class="nav">
         <ul>
-            <li><a href="{$CATEGORYS[145][url]}"> 首页</a></li>
+           <li><a href="{$CATEGORYS[145][url]}"> 首页</a></li>
             <li><a href="{$CATEGORYS[146][url]}"> 最新动态</a></li>
             <li><a href="{$CATEGORYS[147][url]}"> 热点聚焦</a></li>
             <li><a href="{$CATEGORYS[148][url]}"> 教育视点</a></li>
@@ -29,9 +27,9 @@
     <div class="leftbox">
         <div><img src="statics/jyfwzx/style/images/daohang.jpg" usemap="#Map"/>
           <map name="Map">
-            <area shape="rect" coords="29,76,213,115" href="mailto:example@example.com" alt="家教中心">
+           <area shape="rect" coords="29,76,213,115" href="mailto:example@example.com" alt="家教中心">
             <area shape="rect" coords="26,137,214,179" href="{$CATEGORYS[149][url]}" alt="家教读物">
-              {pc:content  action="lists" catid="154" posid="0"  order="listorder DESC" num="1"}
+            {pc:content  action="lists" catid="154" posid="0"  order="listorder DESC" num="1"}
              {if $data}
              {loop $data $v} 
                 <area shape="rect" coords="30,195,204,237" href="{$v[url]}" alt="联系方式">
@@ -40,36 +38,41 @@
               <area shape="rect" coords="30,195,204,237" href="#" alt="联系方式">
              {/if}
              {/pc} 
-<!--             <area shape="rect" coords="30,195,204,237" href="{$CATEGORYS[149][url]}" alt="联系方式"> -->
           </map>
         </div>
         <div style="margin-top: 10px;"><a href="{$CATEGORYS[149][url]}"><img src="statics/jyfwzx/style/images/guangg01.jpg"/></a></div>
     </div>
     <div class="rightbox">
-    
-        <div class="newstab"><h2><b>当前位置：</b><a href="{$CATEGORYS[145][url]}">首页</a>>
-        {pc:get sql="select * from v9_category where catid=$catid" return="data1"}
-                  {loop $data1 $r}
-                   <a href="{$r[url]}">{htmlspecialchars_decode($r[catname])}</a>
-                  {/loop}
-                  {/pc}   
-        </h2>
-
-            <Div class="newscen">
-                <h4>
+        <div class="Photo02">
+            <h2><b>当前位置：</b><a href="{$CATEGORYS[145][url]}">首页</a>>图片库</h2>
+             <Div class="newscen">
+             <h4>
                     <b>{$title}</b>
                     <p>内蒙古妇联 {$inputtime}</p>
-                </h4>
-                <div class="wzcen">
-                {$content}　              
-                </div>
-            </Div>
+              </h4>
+           <div id="galleria" style="min-height:650px;">
+               {loop $pictureurls $pic_k $r}
+                <a>
+               <img src="{$r[url]}" title="{$r[alt]}" alt="" style="width:143px;height:107px;">
+                <P>{$r[alt]}</P>
+                </a>
+                {/loop}
+         </div>
+         </div>
         </div>
     </div>
+
 </div>
 <div class="bottom">
     <p>蒙ICP备 06006126号-1 版权所有：内蒙古自治区妇女联合会</p>
 
     <p>copyright@2008inner mongolia women's federation all rights reserved</p></div>
 </body>
+<script type="text/javascript"> 
+var len=$('#galleria a').length;
+if(len>0){
+	Galleria.loadTheme('statics/jyfwzx/style/js/galleria.classic.js');
+	Galleria.run('#galleria');	
+}
+</script>
 </html>

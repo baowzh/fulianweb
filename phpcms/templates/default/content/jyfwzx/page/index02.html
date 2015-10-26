@@ -12,7 +12,6 @@
      <script type="text/javascript" src="statics/jyfwzx/style/js/utilities.js" ></script>
     <script type="text/javascript" src="statics/jyfwzx/style/js/sodon-min.js" ></script>
     <script type="text/javascript" src="statics/jyfwzx/style/js/scrollview-min.js" ></script>
-   
     
 </head>
 <body>
@@ -20,7 +19,7 @@
     <div><img src="statics/jyfwzx/style/images/banner.jpg" width="100%"/></div>
     <div class="nav">
         <ul>
-            <li><a href="{$CATEGORYS[145][url]}"> 首页</a></li>
+            <li><a href="http://www.nmwomen.org.cn"> 首页</a></li>
             <li><a href="{$CATEGORYS[146][url]}"> 最新动态</a></li>
             <li><a href="{$CATEGORYS[147][url]}"> 热点聚焦</a></li>
             <li><a href="{$CATEGORYS[148][url]}"> 教育视点</a></li>
@@ -48,7 +47,7 @@
              {/pc} 
           </map>
         </div>
-        <div style="margin-top: 15px;"><img src="statics/jyfwzx/style/images/guangg01.jpg"/></div>
+        <div style="margin-top: 15px;"><a href="{$CATEGORYS[149][url]}"><img src="statics/jyfwzx/style/images/guangg01.jpg"/></a></div>
         <div style="margin-top: 20px;"><img src="statics/jyfwzx/style/images/guangg02.jpg"/></div>
     </div>
     <div class="rightbox">
@@ -59,10 +58,10 @@
                       <div class="FocusPic" style="overflow:hidden;height:278px;width:324px;">
                                               <div class="content" id="main-slide" style="width: 324px; height: 278px;">
                               <div class="changeDiv"> 
-                               {pc:content  action="lists" catid="155"  thumb="1" order="listorder DESC" num="5"}
+                               {pc:content  action="lists" catid="145"  thumb="1" order="listorder DESC" num="5"}
                                {loop $data $v} 
-                                 <a href="{$v[url]}" title="{$v[title]}" target="_blank" >
-                                 <img src="{$v[thumb]}" alt="{$v[title]}"  border="0" style="width: 324px; height: 278px;"></a>
+                                 <a href="{$v[url]}" title="{str_cut($v[title],52)}" target="_blank" >
+                                 <img src="{$v[thumb]}" alt="{str_cut($v[title],52)}"  border="0" style="width: 324px; height: 278px;"></a>
                                 {/loop}
                                {/pc}                
                                </div>
@@ -95,16 +94,17 @@
         </div>
         <div class="news02" style="margin-right:6px;">
             <h2><span><img src="statics/jyfwzx/style/images/rdjj.jpg"/></span><a class="more02" href="{$CATEGORYS[147][url]}"></a></h2>
-            <div style="padding:15px; overflow: hidden;min-height:210px;">
+            <div style="padding:15px; overflow: hidden;min-height:205px;">
                 {pc:content  action="position"  catid="147" posid="2" thumb="1" order="id DESC" num="1"}
                 {loop $data $v} 
                 <div class="imgbox02">
                  <img src="{$v[thumb]}" style="width:95px;height:87px;"/>
                 </div>
-                <div class="hot02"><h3> {$v[title]}</h3>
+                <div class="hot02" style="height:70px;"><h3> {$v[title]}</h3>
+                  <p style="max-height:70px;overflow:hidden;">
                   {pc:get sql="select * from v9_news_data where id=$v[id]" return="data1"}
                   {loop $data1 $r}
-                    {str_cut(strip_tags($r[content]),200)}<a href="{$v[url]}">[查看详情]</a>
+                    {str_cut(strip_tags($r[content]),100)}<a href="{$v[url]}">[查看详情]</a>
                   {/loop}
                   {/pc}   
                   </p>            
@@ -122,17 +122,17 @@
         </div>
         <div class="news02">
             <h2><span><img src="statics/jyfwzx/style/images/jysd.jpg"/></span><a class="more02" href="{$CATEGORYS[148][url]}"></a></h2>
-            <div style="padding:15px; overflow: hidden;min-height:210px;">
+            <div style="padding:15px; overflow: hidden;min-height:205px;">
                 {pc:content  action="position"  catid="148"  posid="2"  order="id DESC" num="1"}
                 {loop $data $v} 
                 <div class="imgbox02">
                 <img src="{$v[thumb]}" style="width:95px;height:87px;"/>
                 </div>
-                <div class="hot02"><h3> {$v[title]}</h3>
-                 <p>
+                <div class="hot02" style="height:70px;"><h3> {$v[title]}</h3>
+                 <p style="max-height:70px;overflow:hidden;">
                   {pc:get sql="select * from v9_news_data where id=$v[id]" return="data1"}
                   {loop $data1 $r}
-                    {str_cut(strip_tags($r[content]),200)}<a href="{$v[url]}">[查看详情]</a>
+                    {str_cut(strip_tags($r[content]),100)}<a href="{$v[url]}">[查看详情]</a>
                   {/loop}
                   {/pc}   
                   </p>             
@@ -149,7 +149,7 @@
                 </ul>
             </div>
         </div>
-        <div class="news03" style="border-radius:4px 0 0 4px;">
+        <div class="news03" style="border-radius:4px 0 0 4px;" id="jjduw">
             <h3><a href="{$CATEGORYS[149][url]}"><img src="statics/jyfwzx/style/images/jjduw.jpg" width="100%"/></a></h3>
             <ul style="min-height:148px;">
                {pc:content  action="lists" catid="149" where="catid=149 and posids=0 "  order="id DESC" num="6"}
@@ -195,15 +195,13 @@
     <div class="Photo">
         <div class="tit02">图片库</div>
         <div id="gallerybox" style="width: 1100px;height:142px;overflow:hidden;">
-        <ul >
-            {pc:content  action="lists" catid="153" where="catid=153 and posids=0 "   moreinfo="1"  order="id DESC" num="1"}
+        <ul>
+            {pc:content  action="lists" catid="153" thumb="1"   moreinfo="1"  order="id DESC" num="1"}
                {loop $data $v}
-               {loop string2array($v['pictureurls']) $pic_k $r} 
                 <Li>
-               <img src="{$r[url]}" style="width:143px;height:107px;">
-                <P>{$r[alt]}</P>
-            </Li>
-            {/loop} 
+                <a href="{$v[url]}"><img src="{$v[thumb]}" style="width:143px;height:107px;"></a>
+                <P>{$v[title]}</P>
+                </Li>
               {/loop}
             {/pc} 
         </ul>

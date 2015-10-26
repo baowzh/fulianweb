@@ -39,12 +39,12 @@
 <!--             <area shape="rect" coords="30,195,204,237" href="{$CATEGORYS[149][url]}" alt="联系方式"> -->
           </map>
         </div>
-        <div style="margin-top: 10px;"><img src="statics/jyfwzx/style/images/guangg01.jpg"/></div>
+        <div style="margin-top: 10px;"><a href="{$CATEGORYS[149][url]}"><img src="statics/jyfwzx/style/images/guangg01.jpg"/></a></div>
     </div>
     <div class="rightbox">
-        <div class="newstab"><h2><b>当前位置：</b><a href="{APP_PATH}">首页</a>><a href="{$CATEGORYS[$catid][url]}">{$catname}</a></h2>
+        <div class="newstab"><h2><b>当前位置：</b><a href="{$CATEGORYS[145][url]}">首页</a>><a href="{$CATEGORYS[$catid][url]}">{$catname}</a></h2>
             <ul>
-               {pc:content action="lists" catid="$catid" num="10"  moreinfo="1" order="id DESC" page="$page" }
+               {pc:content action="lists" catid="$catid" num="6"  moreinfo="1" order="id DESC" page="$page" }
                {loop $data $v} 
                <li>
                     <div class="imgbox03">
@@ -61,7 +61,7 @@
         </div>
          <div id="pages" style="width:700px;">
               {$pages}
-            </div>
+         </div>
     </div>
 
 </div>
