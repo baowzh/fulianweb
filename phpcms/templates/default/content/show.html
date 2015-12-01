@@ -1,7 +1,6 @@
 <?php if ($catid == 1):?>
 {template "content","header_show"}
 {template "content","nmgfl_show"}
-
 <?php elseif ($catid == 16) :?>
 {template "content","header_show"}
 {template "content" , "tw3"}
@@ -56,8 +55,14 @@
 <?php elseif ($catid >= 139 and $catid <= 144):?>
 {template "content/meeting101" , "news_02"}  
 <?php exit;?>
-<?php elseif ($catid >= 146 and $catid <= 154):?>
-{template "content/jyfwzx/page" , "news02"}  
+<?php elseif ($catid == 156):?>
+{template "content/meeting101" , "news_02"}  
+<?php exit;?>
+<?php elseif ($catid >= 146 and $catid <= 155):?>
+ {template "content/jyfwzx/page" , "news02"}  
+<?php exit;?>
+<?php elseif ($catid >= 158 and $catid <= 162):?>
+ {template "content/fnwq/page" , "content"}  
 <?php exit;?>
 <?php elseif ($catid == 13 ):?>
   {template "content","header_show"} 

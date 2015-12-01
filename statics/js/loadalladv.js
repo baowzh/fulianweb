@@ -55,7 +55,7 @@ function showPopupAdv(B) {
             }
         }
         if (this.showclosed) {
-            jQuery("#" + this.pdivId + "").html(jQuery("#" + this.pdivId + "").html() + "<img style='display:none;position:absolute;right:5px;top:6px;z-index:2;cursor:pointer;' src='http://i3.dukuai.com/ui/style/09/img/float_ad_closed.gif' class='closedbutton' title='¹Ø±Õ' />")
+            jQuery("#" + this.pdivId + "").html(jQuery("#" + this.pdivId + "").html() + "<img style='display:none;position:absolute;right:5px;top:6px;z-index:2;cursor:pointer;' src='http://i3.dukuai.com/ui/style/09/img/float_ad_closed.gif' class='closedbutton' title='ï¿½Ø±ï¿½' />")
         }
         if (this.adv.advType != 4) {
             if (this.position == 1) {
@@ -130,7 +130,7 @@ function showPopupAdv(B) {
         jQuery("#" + this.pdivId + "").find("cite").css({
             display: "none"
         });
-        jQuery(document.body).append("<div id='float_ad_replay'><a hrer='#' class='float_ad_replay' title='ÖØ²¥'>ÖØ²¥</a><a hrer='#' class='float_ad_closed' title='¹Ø±Õ'>¹Ø±Õ</a></div>");
+        jQuery(document.body).append("<div id='float_ad_replay'><a hrer='#' class='float_ad_replay' title='ï¿½Ø²ï¿½'>ï¿½Ø²ï¿½</a><a hrer='#' class='float_ad_closed' title='ï¿½Ø±ï¿½'>ï¿½Ø±ï¿½</a></div>");
         jQuery("#float_ad_replay .float_ad_small").css({
             position: "relative",
             zIndex: "1",
@@ -391,7 +391,7 @@ function showFullScreenAdv(A) {
         advPlace: "adv_forum_home_full",
         advParam: "ad_bbs_0804hunbo_1002*274",
         advUrl: "/8337.swf",
-        advLink: "http://www.nmwomen.org.cn/index.php?m=content&c=index&a=lists&catid=110",
+        advLink: "http://127.0.0.1/emegtaiqud/index.php?m=content&c=index&a=lists&catid=110",
         advWidth: 1002,
         advType: "7",
         advHeight: 275

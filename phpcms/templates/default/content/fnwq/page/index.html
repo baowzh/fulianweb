@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内蒙古妇女维权法制宣传月</title>
+<link rel="stylesheet" type="text/css"
+	href="statics/fnwqxcy/css/css.css" />
+<script type="text/javascript" src="statics/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="statics/jyfwzx/style/js/jquery.sgallery.js" ></script>
+     <script type="text/javascript" src="statics/jyfwzx/style/js/utilities.js" ></script>
+    <script type="text/javascript" src="statics/jyfwzx/style/js/sodon-min.js" ></script>
+</head>
+<body>
+	<div class="head">
+		<img src="statics/fnwqxcy/images/head1.jpg" width="1000" height="241" /><img
+			src="statics/fnwqxcy/images/head2.jpg" width="1000" height="275" />
+	</div>
+	<div class="content_bg">
+		<div class="content">
+			<a href="{$CATEGORYS[163][url]}" target="_blank"><img
+				src="statics/fnwqxcy/images/1.png" width="939" height="118" /></a>
+		</div>
+	</div>
+	<div class="content2_bg">
+		<div class="content2">
+			<div class="tit">维护妇女儿童合法权益</div>
+			<div class="txt">
+				<div class="left">
+				  <div id="gallery">
+                      <div class="FocusPic" style="overflow:hidden;height:260px;width:400px;">
+                              <div class="content" id="main-slide" style="width: 400px; height: 260px;">
+                              <div class="changeDiv"> 
+                               {pc:content  action="position" catid="159" posid="16"  order="id DESC" num="5"}
+                               {loop $data $v} 
+                                 <a href="{$v[url]}" title="{str_cut($v[title],62)}" target="_blank" >
+                                 <img src="{$v[thumb]}" alt="{str_cut($v[title],52)}"  border="0" style="width: 400px; height: 260px;"></a>
+                                {/loop}
+                               {/pc}                
+                               </div>
+                                                  
+                          </div>                       
+                    </div>   
+                </div>
+				<!--  
+				{pc:content  action="position" catid="159" posid="16"  order="id DESC" num="1"}
+                {loop $data $v} 
+					<a href="{$v[url]}" target="_blank"><img
+						src="{$v[thumb]}" width="400" height="260" /></a>
+				 {/loop}
+                 {/pc} 	
+                 -->
+				</div>
+				<div class="right">
+					{pc:content  action="position" catid="159" posid="15"  order="id DESC" num="1"}
+                    {loop $data $v} 
+					<h2>
+						<a href="{$v[url]}" target="new">{str_cut($v[title],82)}</a>
+					</h2>
+					<p>
+					 
+					{pc:get sql="select * from v9_news_data where id=$v[id]" return="data1"}
+                  {loop $data1 $r}
+                    <p>{str_cut(strip_tags($r[content]),180)}</p>
+                  {/loop}
+                  {/pc}  
+					
+					</p>
+					{/loop}
+                    {/pc}  
+					<ul>
+						{pc:content  action="lists" catid="159"   order="listorder DESC" num="4"}
+                        {loop $data $v} 
+                         
+						 <li><a href="{$v[url]}" target="_blank">
+						  {str_cut($v[title],82)}
+						    </a>
+						 </li>
+						
+						{/loop}
+                        {/pc}   					
+					</ul>
+					<span><a href="{$CATEGORYS[159][url]}" target="_blank">点击查看更多信息>></a></span>
+				</div>
+				<div class="clearfloat"></div>
+			</div>
+			<div class="tit1">
+				<span><a href="{$CATEGORYS[160][url]}" target="_blank">MORE>></a></span>12.1世界艾滋病日
+			</div>
+			<div class="txt2">
+				{pc:content  action="lists" catid="160"   order="listorder DESC" num="10"}
+				<ul style="display:block;widht:440px;min-height:180px;">
+				<!--  放前5个 -->
+				   {loop $data $v} 
+				     {if $n<=5 }
+					<li>
+					<span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">{str_cut($v[title],62)}</a>
+					</li>
+					{/if}
+				   {/loop}
+				</ul>
+				<!-- 放后5个 -->
+				<ul style="display:block;widht:440px;min-height:180px;">
+				   {loop $data $v} 
+				   {if $n>5 }
+					<li><span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">{str_cut($v[title],52)}</a></li>			
+				   {/if} 
+				   {/loop}
+				</ul>
+				 {/pc}   
+				<div class="clearfloat"></div>
+			</div>
+			<div class="tit1">
+				<span><a href="{$CATEGORYS[161][url]}" target="_blank">MORE>></a></span>创建平安家庭
+			</div>
+			<div class="txt2">
+			 {pc:content  action="lists" catid="161"   order="listorder DESC" num="10"}
+				<ul style="display:block;widht:440px;min-height:180px;">
+				  {loop $data $v} 
+				     {if $n<=5 }
+					<li><span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">{str_cut($v[title],52)}</a></li>
+					{/if}
+				   {/loop}
+				</ul>
+				<ul style="display:block;widht:440px;min-height:180px;">
+				   {loop $data $v} 
+				   {if $n>5 }
+					<li><span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">{str_cut($v[title],52)}</a></li>
+				   {/if}
+				   {/loop}
+				</ul>
+			 {/pc}   
+				<div class="clearfloat"></div>
+			</div>
+
+			<div class="tit1">
+				<span><a href="{$CATEGORYS[162][url]}" target="_blank">MORE>></a></span>维护农村妇女土地权益
+			</div>
+			<div class="txt2">
+			 {pc:content  action="lists" catid="162"   order="listorder DESC" num="10"}
+				<ul style="display:block;widht:440px;min-height:180px;">
+					 {loop $data $v} 
+				     {if $n<=5 }
+					<li><span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">{str_cut($v[title],62)}</a></li>
+					{/if}
+				    {/loop}
+				</ul>
+				<ul style="display:block;widht:440px;min-height:180px;">
+					{loop $data $v} 
+				    {if $n>5 }
+					<li><span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">{str_cut($v[title],62)}</a></li>
+					{/if}
+				    {/loop}
+					
+				</ul>
+			{/pc}   
+				<div class="clearfloat"></div>
+			</div>
+		</div>
+	</div>
+	<div class="footbg"></div>
+	<div class="foot">
+		<p>
+			蒙ICP备 06006126号-1 版权所有：<a href="http://www.nmwomen.org.cn/" target="_blank">内蒙古自治区妇女联合会</a>
+		</p>
+		<p>copyright@2008inner mongolia women's federation all rights
+			reserved</p>
+	</div>
+</body>
+<script type="text/javascript"> 
+$(function(){
+   new slide("#main-slide","cur",400,260,1);//焦点图
+}) 
+</script>
+</html>

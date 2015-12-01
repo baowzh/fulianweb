@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>内蒙古妇女维权法制宣传月</title>
+<link rel="stylesheet" type="text/css"
+	href="statics/fnwqxcy/css/css.css" />
+</head>
+<body>
+	<div class="head">
+		<img src="statics/fnwqxcy/images/head1.jpg" width="1000" height="241" /><img
+			src="statics/fnwqxcy/images/head2.jpg" width="1000" height="275" />
+	</div>
+	{pc:content  action="lists" catid="$catid"   order="listorder DESC" num="12" page="$page"}
+	<div class="content_bg" style="min-height:187px;">
+		<div class="content3">
+			<div class="tit">
+				<span style="float:right;">
+			    <a href="{$CATEGORYS[158][url]}" target="_blank">首页</a> &gt; {catpos($catid)}
+			 </span>
+			</div>
+			<ul>
+			  {loop $data $v} 
+			   {if $n<=2 }
+				<li><span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">
+				{$v[title]}
+				</a></li>
+			   {/if}
+			  {/loop}
+			</ul>
+		</div>
+	</div>
+	<div class="content2_bg" style="min-height:360px;">
+		<div class="content2">
+			<ul>
+			  {loop $data $v} 
+			  {if $n>2 }
+				<li><span>{date('Y-m-d',$v[inputtime])}</span><a href="{$v[url]}" target="_blank">
+				{$v[title]}
+				</a></li>
+			{/if}
+			{/loop}
+			</ul>
+		</div>
+	</div>
+	 {/pc}  
+	<div class="footbg" style="text-align:center;">
+	 {$pages}
+	</div>
+	<div class="foot">
+		<p>
+			蒙ICP备 06006126号-1 版权所有：<a href="http://www.nmwomen.org.cn/" target="_blank">内蒙古自治区妇女联合会</a>
+		</p>
+		<p>copyright@2008inner mongolia women's federation all rights
+			reserved</p>
+	</div>
+</body>
+</html>

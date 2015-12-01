@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box
+}
+
+body {
+	font: 16px/1.5 "微软雅黑", Arial, Helvetica, Geneva, sans-serif;
+	color: #576366;
+	margin: 0px;
+	padding: 0px;
+	background: url(../images/headbg.png) no-repeat top center #710100;
+}
+
+ul, ol {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a, a:hover {
+	-o-transition: color .25s ease-in;
+	-webkit-transition: color .25s ease-in;
+	-moz-transition: color .25s ease-in;
+	transition: color .25s ease-in
+}
+
+article, header, section {
+	display: block;
+	float: left;
+	width: 100%
+}
+
+article {
+	width: 96%;
+	padding: 3em 2%
+}
+
+a.meanmenu-reveal {
+	display: none
+}
+
+a img {
+	border: none;
+}
+
+.clearfloat {
+	width: auto;
+	height: 0px;
+	line-height: 0px;
+	clear: both;
+}
+
+.head {
+	width: 1000px;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+.content_bg {
+	background: url(../images/contentbg.jpg) no-repeat top center;
+	height: 187px;
+}
+
+.content {
+	width: 981px;
+	margin: 0px auto;
+	padding: 50px 0px 0px 19px;
+	height: 137px;
+}
+
+.content2_bg {
+	background: url(../images/cbg.jpg) repeat-y top center;
+}
+
+.content2 {
+	width: 981px;
+	margin: -9px auto 0px auto;
+	padding: 0px 0px 0px 19px;
+}
+
+.content2 p {
+	line-height: 37px;
+	padding-top: 15px;
+	padding-left: 8px;
+	padding-right: 20px;
+	font-size: 18px;
+	color: #333;
+}
+
+.content3 {
+	width: 939px;
+	margin: 0px auto;
+	padding: 40px 0px 0px 0px;
+}
+
+.content3 h2 {
+	color: #ce0005;
+	font-size: 24px;
+	text-align: center;
+}
+
+.content3 h3 {
+	font-size: 18px;
+	text-align: center;
+	font-weight: normal;
+	padding: 5px 0px;
+	color: #333;
+}
+
+.tit {
+	background: url(../images/titbg.png) no-repeat;
+	width: 939px;
+	height: 72px;
+	line-height: 61px;
+	font-size: 24px;
+	color: #FFF;
+	padding-left: 70px;
+}
+
+.tit span {
+	float: right;
+	padding-right: 20px;
+	font-size: 14px;
+	line-height: 63px;
+}
+
+.tit span a {
+	color: #FFF;
+}
+
+.txt {
+	width: 939px;
+	margin: -10px auto 0px auto;
+	padding: 0px 20px 0px 0px;
+}
+
+.tit1 {
+	background: url(../images/titbg.png) no-repeat;
+	width: 939px;
+	height: 72px;
+	line-height: 61px;
+	font-size: 24px;
+	color: #FFF;
+	padding-left: 70px;
+	margin-top: 10px;
+}
+
+.tit1 span {
+	float: right;
+	font-size: 14px;
+	line-height: 63px;
+	padding-right: 20px;
+}
+
+.tit1 span a {
+	color: #FFF;
+}
+
+.left {
+	float: left;
+	width: 400px;
+	margin: 10px auto 0px auto;
+	padding: 0px;
+}
+
+.right {
+	float: left;
+	width: 489px;
+	margin: 10px 0px 0px 30px;
+	padding: 0px;
+}
+
+.right h2 {
+	font-size: 18px;
+	text-align: center;
+	margin: 0px;
+}
+
+.right h2 a {
+	color: #ce0005;
+}
+
+.right p {
+	font-size: 14px;
+	color: #000;
+	line-height: 25px;
+	margin-top: -15px;
+}
+
+.right ul li {
+	background: url(../images/xx.png) no-repeat 0px center;
+	padding-left: 30px;
+	font-size: 14px;
+	line-height: 35px;
+	border-bottom: 1px #333333 dotted;
+}
+
+.right ul li a {
+	color: #000;
+}
+
+.right ul li a:hover {
+	color: #ce0005;
+}
+
+.right span {
+	background: url(../images/more.jpg) no-repeat;
+	width: 466px;
+	height: 31px;
+	line-height: 31px;
+	text-align: center;
+	display: block;
+	margin-top: 10px;
+}
+
+.right span a {
+	color: #FFF;
+}
+
+.right span a:hover {
+	color: #fff900;
+}
+
+.txt2 ul {
+	width: 440px;
+	float: left;
+	margin-left: 20px;
+}
+
+.txt2 ul li {
+	background: url(../images/xx.png) no-repeat 0px center;
+	padding-left: 30px;
+	font-size: 14px;
+	line-height: 35px;
+	border-bottom: 1px #333333 dotted;
+}
+
+.txt2 ul li a {
+	color: #000;
+}
+
+.txt2 ul li a:hover {
+	color: #ce0005;
+}
+
+.txt2 ul li span {
+	float: right;
+}
+
+.content3 ul {
+	margin-top: -8px;
+	padding-right: 20px;
+	padding-left: 15px;
+}
+
+.content3 ul li {
+	background: url(../images/xx.png) no-repeat 0px center;
+	padding-left: 30px;
+	font-size: 14px;
+	line-height: 35px;
+	border-bottom: 1px #333333 dotted;
+}
+
+.content3 ul li a {
+	color: #000;
+}
+
+.content3 ul li a:hover {
+	color: #ce0005;
+}
+
+.content3 ul li span {
+	float: right;
+}
+
+.content2 ul {
+	padding-right: 40px;
+	padding-left: 15px;
+}
+
+.content2 ul li {
+	background: url(../images/xx.png) no-repeat 0px center;
+	padding-left: 30px;
+	font-size: 14px;
+	line-height: 35px;
+	border-bottom: 1px #333333 dotted;
+}
+
+.content2 ul li a {
+	color: #000;
+}
+
+.content2 ul li a:hover {
+	color: #ce0005;
+}
+
+.content2 ul li span {
+	float: right;
+}
+
+.next {
+	width: 930px;
+	margin: 0px auto;
+	padding: 10px 0px;
+	font-size: 16px;
+	color: #ce0005;
+}
+
+.next a {
+	color: #000;
+}
+
+.footbg {
+	background: url(../images/foot.jpg) no-repeat top center;
+	height: 52px;
+	margin: 0px auto;
+	padding: 0px;
+}
+
+.foot {
+	width: 1000px;
+	margin: 0px auto;
+	padding: 0px;
+	color: #FFF;
+	padding: 10px 0px;
+	text-align: center;
+}
+
+.foot a {
+	color: #FFF;
+}
+#pages a.a1 {
+    background: url(../images/admin_img/pages.png) no-repeat 0 5px;
+    width: 56px;
+    padding: 0;
+}
+#pages a {
+    display: inline-block;
+    height: 22px;
+    line-height: 22px;
+    background: #fff;
+    border: 1px solid #e3e3e3;
+    text-align: center;
+    color: #333;
+    padding: 0 10px;
+}
+.FocusPic {
+	zoom: 1;
+	position: relative;
+	overflow: hidden;
+}
+
+.FocusPic .content {
+	overflow: hidden;
+}
+
+.FocusPic .changeDiv a {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	display: none;
+}
+
+.FocusPic .changeDiv a  img {
+	width: 400px;
+	height: 260px;
+}
+
+.title {
+	position: absolute;
+	left: 0px;
+	bottom: 0;
+	width: 205px;
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	text-align: left;
+}
+
+
+.FocusPic .title a {
+	display: block;
+	padding-left: 10px;
+	color: #fff;
+	font-size: 12px;
+}
+
+.FocusPic .title-bg {
+	background: #666;
+	filter: alpha(opacity = 50);
+	opacity: 0.5;
+}
+
+.FocusPic .change {
+	bottom: 0px;
+	height: 20px;
+	right: 3px;
+	_right: 4px;
+	position: absolute;
+	text-align: right;
+	z-index: 9999;
+}
+
+.FocusPic .change i {
+	background: #666;
+	color: #FFF;
+	cursor: pointer;
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 15px;
+	margin-right: 2px;
+	padding: 2px 6px;
+	font-style: normal;
+	height: 15px;
+	display: inline-block;
+	display: -moz-inline-stack;
+	zoom: 1;
+}
+.FocusPic .change i.cur {
+  background: #FF7700;
+}

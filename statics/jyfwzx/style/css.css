@@ -85,6 +85,9 @@ header {
     height: 480px;
 
 }
+header img{
+height: 475px;	
+}
 
 .nav {
     z-index: 2;
@@ -322,11 +325,28 @@ header {
     top: -14px;
     left: 30px;
     width: 80px;
+	float:left;
 }
+.Photo02 ul{
+    overflow: hidden;
+	padding:20px 10px;
+	display:block;
+    background: #f9f9f9;
+	min-height:700px;
+	}
 .Photo ul{
     margin:5px 10px;
     overflow: hidden;
+	float:left;
+
 }
+.Photo02 ul li{
+	width: 144px;
+    margin: 5px 16px;
+    float: left;
+    line-height: 28px;
+    color: #410e0a;
+	}
 .Photo ul li{
     width: 144px;
     margin: 3px 8px;
@@ -345,6 +365,7 @@ header {
 .newstab{
     overflow: hidden;
 }
+.Photo02 h2,
 .newstab h2{
     background: url(../style/images/linstbg.jpg) repeat-x bottom left;
     padding:0 4px 8px;
@@ -354,14 +375,17 @@ header {
     text-align: left;
     font-weight: normal;
 }
+.Photo02 h2 b,
 .newstab h2 b{
     font-size: 14px;
     color: #e6181a;
     font-weight: bold;
 }
+.Photo02 h2 a,
 .newstab h2 a{
     color: #919191;
 }
+.Photo02 h2 a:hover,
 .newstab h2 a:hover{
     color: #e6181a;
 }
@@ -456,6 +480,19 @@ header {
     min-height: 600px;
     text-align: left;
 }
+.more03{
+	background: #fff;
+    color: #d21914;
+    font-size: 12px;
+    padding: 6px 10px;
+    font-weight: normal;
+    position: relative;
+    top:-10px;
+    right: 30px;
+    width: 40px;
+	float:right;
+	}
+
 .FocusPic {
 	zoom: 1;
 	position: relative;
@@ -474,30 +511,27 @@ header {
 }
 
 .FocusPic .changeDiv a  img {
-	width: 530px;
-	height: 300px;
+	width: 324px;
+	height: 278px;
 }
 
 .title {
 	position: absolute;
 	left: 0px;
 	bottom: 0;
-	width: 195px;
-	height: 30px;
-	line-height: 30px;
+	width: 205px;
+	height: 20px;
+	line-height: 20px;
 	overflow: hidden;
 	text-align: left;
-   text-overflow: ellipsis;
 }
+
 
 .FocusPic .title a {
 	display: block;
-	padding-left: 15px;
+	padding-left: 10px;
 	color: #fff;
 	font-size: 12px;
-	overflow: hidden;
-	text-align: left;
-   text-overflow: ellipsis;
 }
 
 .FocusPic .title-bg {
@@ -522,11 +556,11 @@ header {
 	cursor: pointer;
 	font-family: Arial;
 	font-size: 12px;
-	line-height: 12px;
+	line-height: 15px;
 	margin-right: 2px;
 	padding: 2px 6px;
 	font-style: normal;
-	height: 12px;
+	height: 15px;
 	display: inline-block;
 	display: -moz-inline-stack;
 	zoom: 1;

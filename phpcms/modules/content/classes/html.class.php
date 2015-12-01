@@ -324,6 +324,7 @@ class html {
 		$SEO = seo($this->siteid);
 		$siteid = $this->siteid;
 		$CATEGORYS = $this->categorys;
+		
 		$style = $this->sitelist[$siteid]['default_style'];
 		ob_start();
 		include template('content','index',$style);

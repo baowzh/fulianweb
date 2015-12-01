@@ -24,6 +24,7 @@ class attachments {
 	 * 常规上传
 	 */
 	public function upload() {
+		echo '1';
 		$grouplist = getcache('grouplist','member');
 		if($this->isadmin==0 && !$grouplist[$this->groupid]['allowattachment']) return false;
 		pc_base::load_sys_class('attachment','',0);
