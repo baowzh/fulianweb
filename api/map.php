@@ -1,19 +1,24 @@
 <?php
-defined('IN_PHPCMS') or exit('No permission resources.'); 
-$field = trim($_GET['field']);
+defined('IN_PHPCMS') or exit('No permission resources.');
+$field = remove_xss(safe_replace(trim($_GET['field'])));
 $modelid = intval($_GET['modelid']);
 $data = getcache('model_field_'.$modelid,'model');
 $setting = string2array($data[$field]['setting']);
-$key = $_GET['api_key'] ? $_GET['api_key'] : $setting['api_key'];
+$key = $_GET['api_key'] ? safe_replace($_GET['api_key']) : $setting['api_key'];
+$key = str_replace(array('/','(',')','&',';'),'',$key);
 $maptype = $_GET['maptype'] ? intval($_GET['maptype']) : ($setting['maptype'] ? $setting['maptype'] : 1);
 $defaultcity = $_GET['defaultcity'] ? $_GET['defaultcity'] : ($setting['defaultcity'] ? $setting['defaultcity'] : '北京');
+$defaultcity = remove_xss(safe_replace($defaultcity));
+
+if(CHARSET=="utf-8" && !is_utf8($defaultcity)) exit('-1');
+if(CHARSET=="gbk" && is_utf8($defaultcity)) exit('-2');
 $hotcitys = explode(",",$setting['hotcitys']);
 if(!isset($_GET['city'])) {
 ?>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"<?php if(isset($addbg)) { ?> class="addbg"<?php } ?>>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8 echo CHARSET ?>">
+<meta http-equiv="Content-Type" content="text/html; charset=<?php echo CHARSET ?>">
 <?php if($maptype == 1) {?>
 <script src="http://app.mapabc.com/apis?&t=flashmap&v=2.4&key=<?php echo $key?>&hl=zh-CN" type="text/javascript"></script>
 <?php } elseif($maptype == 2) {?>
@@ -66,7 +71,7 @@ body{font-size: 12px;}
   //设置中心点为北京
   //设置地图初始化参数对象
   var mapOptions = new MMapOptions();
-  var defaultcity = "<?php echo strtolower(CHARSET)!='utf-8' ? iconv(CHARSET,'UTF-8',$defaultcity) : $defaultcity?>";
+  var defaultcity = "<?php echo $defaultcity;?>";
   mapOptions.toolbar = MConstants.MINI;
   mapOptions.scale = new MPoint(20,20);  
   mapOptions.zoom = 10;
@@ -266,6 +271,7 @@ function removeMarker() {
 } elseif(!empty($_GET['city']) && $maptype==1) {
 	if(!$_GET['city'])  showmessage(L('error'));
 	$city = urldecode(trim($_GET['city']));
+	$city = str_replace(array('<','>','"',"'",'/','(',')','&',';'),'',$city);
 	echo $city;
 }
 ?>

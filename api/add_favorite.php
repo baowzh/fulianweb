@@ -11,20 +11,22 @@ if(empty($_GET['title']) || empty($_GET['url'])) {
 	exit('-2');	
 } else {
 	$title = $_GET['title'];
-	$title = urldecode($title);
+	$title = addslashes(urldecode($title));
 	if(CHARSET != 'utf-8') {
 		$title = iconv('utf-8', CHARSET, $title);
+		$title = addslashes($title);
 	}
 	
-	$title = htmlspecialchars($title);
-	$url = safe_replace(urldecode($_GET['url']));
+	$title = new_html_special_chars($title);
+	$url = safe_replace(addslashes(urldecode($_GET['url'])));
+	$url = trim_script($url);
 }
-
+$_GET['callback'] = safe_replace($_GET['callback']);
 //判断是否登录	
 $phpcms_auth = param::get_cookie('auth');
 if($phpcms_auth) {
-	$auth_key = md5(pc_base::load_config('system', 'auth_key').$_SERVER['HTTP_USER_AGENT']);
-	list($userid, $password) = explode("\t", sys_auth($phpcms_auth, 'DECODE', $auth_key));
+	list($userid, $password) = explode("\t", sys_auth($phpcms_auth, 'DECODE', get_auth_key('login')));
+	$userid = intval($userid);
 	if($userid >0) {
 
 	} else {
